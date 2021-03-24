@@ -1,0 +1,18 @@
+package com.simpson.model.service;
+
+import java.sql.Connection;
+
+import com.simpson.model.dao.MemberDao;
+import com.simpson.model.vo.Member;
+
+import static common.JDBCTemplate.*;
+
+public class MemberService {
+	private MemberDao memberDao = new MemberDao();
+	
+	//회원가입
+	public int insertMember(Member member) {
+		Connection conn = getCon
+	}
+
+}

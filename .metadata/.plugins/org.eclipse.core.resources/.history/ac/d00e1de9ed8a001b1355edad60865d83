@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>helloweb</title>
+</head>
+<body>
+	<h1 style="color:red" onclick="">helloweb</h1>
+	<p>안녕~</p>
+	<script>
+	function foo() {
+        alert("foo를 호출!!!");
+      }
+	</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SIGN UP</title>
+</head>
+<body>
+	<h1>회원가입</h1>
+    <hr />
+    <form name="signupFrm" action="/web/signup.do" method="POST">
+      <ul style="list-style: none">
+        <li>아이디 : <input type="text" name="user_id" required /></li>
+        <li>비밀번호 : <input type="password" name="user_pw" required /></li>
+      </ul>
+    </form>
+</body>
+</html>

@@ -1,0 +1,7 @@
+package com.simpson.controller;
+
+import com.simpson.model.dao.MemberDao;
+
+public class MemberController {
+	private MemberDao memberDao = new MemberDao();
+}

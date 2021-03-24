@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SIGN UP</title>
+</head>
+<body>
+	<h1>회원가입</h1>
+    <hr />
+    <form name="signupFrm" action="/web/signup.do" method="POST">
+      <ul style="list-style: none">
+        <li>아이디 : <input type="text" name="user_id" required /></li>
+        <li>비밀번호 : <input type="password" name="user_pw" required /></li>
+        <li>이름 : <input type="text" name="user_name" required /></li>
+        <li>주민번호 7자리 :
+          <input
+            type="text"
+            name="user_name"
+            minlength="7"
+            maxlength="7"
+            required
+          />
+        </li>
+        <li>이메일 : <input type="text" name="user_name" required /></li>
+        <li>전화번호 : <input type="text" name="user_name" required /></li>
+        <li>주소 : <input type="text" name="user_name" required /></li>
+        <li>
+			<br/>
+			<input type="submit" id="btnOK" value="확인"  />&nbsp;&nbsp; 
+			<input type="reset"  value="취소" />
+		</li>
+      </ul>
+    </form>
+</body>
+</html>

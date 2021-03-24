@@ -1,0 +1,5 @@
+package com.simpson.common;
+
+public class JDBCTemplate {
+
+}

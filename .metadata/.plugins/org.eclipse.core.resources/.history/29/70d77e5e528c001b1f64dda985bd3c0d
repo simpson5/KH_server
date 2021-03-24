@@ -1,0 +1,8 @@
+package com.simpson.common;
+
+public class JDBCTemplate {
+	private static String driverClass;
+	private static String url;
+	private static String user;
+	private static String password;
+}

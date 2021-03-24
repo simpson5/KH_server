@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="java.rmi.ServerException"/>
+<fullyQualifiedTypeName name="com.simpson.model.vo.User"/>
+<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+<fullyQualifiedTypeName name="java.sql.DriverManager"/>
+<fullyQualifiedTypeName name="java.sql.SQLException"/>
+<fullyQualifiedTypeName name="com.simpson.model.dao.MemberrDao"/>
+<fullyQualifiedTypeName name="com.simpson.controller.MemberController"/>
+<fullyQualifiedTypeName name="java.io.FileReader"/>
+<fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="com.simpson.model.dao.MemberDao"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="java.util.Properties"/>
+<fullyQualifiedTypeName name="java.lang.RuntimeException"/>
+<fullyQualifiedTypeName name="com.simpson.model.service.MemberService"/>
+<fullyQualifiedTypeName name="com.simpson.model.exception.MemberException"/>
+<fullyQualifiedTypeName name="com.simpson.model.vo.Member"/>
+<fullyQualifiedTypeName name="common.JDBCTemplate"/>
+</qualifiedTypeNameHistroy>

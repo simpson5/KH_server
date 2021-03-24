@@ -1,0 +1,10 @@
+package com.simpson.model.dao;
+
+public class UserDao {
+	String driverClass = "oracle.jdbc.OracleDriver";
+	String url = "jdbc:oracle:thin:@localhost:1521:xe";
+	String user = "student";
+	String password = "student";
+	
+	
+}
