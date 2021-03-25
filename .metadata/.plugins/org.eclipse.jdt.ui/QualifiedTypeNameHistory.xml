@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
 <fullyQualifiedTypeName name="java.lang.Override"/>
 <fullyQualifiedTypeName name="java.rmi.ServerException"/>
 <fullyQualifiedTypeName name="com.simpson.model.vo.User"/>
@@ -20,4 +19,6 @@
 <fullyQualifiedTypeName name="com.simpson.model.exception.MemberException"/>
 <fullyQualifiedTypeName name="com.simpson.model.vo.Member"/>
 <fullyQualifiedTypeName name="common.JDBCTemplate"/>
+<fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
 </qualifiedTypeNameHistroy>

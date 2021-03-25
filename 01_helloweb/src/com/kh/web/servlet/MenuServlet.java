@@ -44,11 +44,9 @@ public class MenuServlet extends HttpServlet {
 		}
 		switch (drink_menu) {
 		case "콜라":
-			price += 1000;
-			break;
 		case "사이다":
 			price += 1000;
-			break;
+			break; // switch fall-through
 		case "커피":
 			price += 1500;
 			break;
@@ -60,8 +58,9 @@ public class MenuServlet extends HttpServlet {
 		// 3. 값 저장
 		request.setAttribute("price", price);
 		
-		//4. html작성을 jsp에 위임.
-		RequestDispatcher reqDispatcher = request.getRequestDispatcher("/menu/menuEnd.jsp");
+		// 4. html 작성을 jsp에 위임.
+		RequestDispatcher reqDispatcher =
+				request.getRequestDispatcher("/menu/menuEnd.jsp");
 		reqDispatcher.forward(request, response);
 	}
 
