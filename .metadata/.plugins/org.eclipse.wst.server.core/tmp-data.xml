@@ -2,4 +2,5 @@
 <temp-directories>
   <temp-directory age="0" key="helloweb-server" path="tmp0" recycle="false"/>
   <temp-directory age="0" key="simpsonweb-server" path="tmp1" recycle="false"/>
+  <temp-directory age="0" key="hellomvc-server" path="tmp2" recycle="false"/>
 </temp-directories>

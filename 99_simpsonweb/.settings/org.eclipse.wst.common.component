@@ -2,7 +2,7 @@
     <wb-module deploy-name="99_simpsonweb">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <property name="context-root" value="web"/>
         <property name="java-output-path" value="/99_simpsonweb/WebContent/WEB-INF/classes"/>
+        <property name="context-root" value="simpson"/>
     </wb-module>
 </project-modules>

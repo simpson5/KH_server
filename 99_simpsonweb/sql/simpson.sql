@@ -1,5 +1,3 @@
-
-
 create user simpson999
 identified by simpson999
 default tablespace users;

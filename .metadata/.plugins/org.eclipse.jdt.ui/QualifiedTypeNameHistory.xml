@@ -8,17 +8,21 @@
 <fullyQualifiedTypeName name="java.sql.SQLException"/>
 <fullyQualifiedTypeName name="com.simpson.model.dao.MemberrDao"/>
 <fullyQualifiedTypeName name="com.simpson.controller.MemberController"/>
-<fullyQualifiedTypeName name="java.io.FileReader"/>
 <fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
 <fullyQualifiedTypeName name="java.io.IOException"/>
 <fullyQualifiedTypeName name="com.simpson.model.dao.MemberDao"/>
-<fullyQualifiedTypeName name="java.sql.Connection"/>
-<fullyQualifiedTypeName name="java.util.Properties"/>
 <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
 <fullyQualifiedTypeName name="com.simpson.model.service.MemberService"/>
 <fullyQualifiedTypeName name="com.simpson.model.exception.MemberException"/>
 <fullyQualifiedTypeName name="com.simpson.model.vo.Member"/>
-<fullyQualifiedTypeName name="common.JDBCTemplate"/>
 <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="common.JDBCTemplate"/>
+<fullyQualifiedTypeName name="java.util.Properties"/>
+<fullyQualifiedTypeName name="java.io.FileReader"/>
+<fullyQualifiedTypeName name="java.sql.Date"/>
+<fullyQualifiedTypeName name="member.model.exception.MemberException"/>
+<fullyQualifiedTypeName name="member.model.vo.Member"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
 </qualifiedTypeNameHistroy>
