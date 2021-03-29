@@ -3,6 +3,9 @@
 <%@page import="member.model.vo.Member"%>
 
 <%
+	//현재 로그인한 멤버 정보
+	System.out.println("member@header.jsp = " + (Member)session.getAttribute("loginMember"));
+
 	String msg = (String)session.getAttribute("msg");
 	//세션에서 msg를 지워버린다. 하지만 html msg는 남아있다.
 	if(msg != null) session.removeAttribute("msg");

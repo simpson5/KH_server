@@ -66,17 +66,10 @@ public class MemberEnrollServlet extends HttpServlet {
 		
 		Date birthday = Date.valueOf(birthday_string);
 		
-		//예외 처리 왜 하는거지?
-//		try {
-//			birthday = new Date(dateFormat.parse(birthday_string).getTime());
-//		} catch (ParseException e1) {
-//			e1.printStackTrace();
-//		}
-		
 		Member member = new Member(memberId, password, memberName, memberRole, gender, birthday, email, phone, address, hobby, enrolldate);
 		
-		HttpSession session = request.getSession(true);
 		//3. DB에 저장
+		HttpSession session = request.getSession(true);
 		int result = 0;
 		
 		try {
