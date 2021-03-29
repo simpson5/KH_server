@@ -14,9 +14,9 @@ public class MemberService {
 	public static final String MEMBER_ROLE = "U";
 	public static final String ADMIN_ROLE = "A";
 
-	public Member selectOne(String memberId, String password) {
+	public Member selectOne(String memberId) {
 		Connection conn = getConnection();
-		Member member = memberDao.selectOne(conn, memberId, password);
+		Member member = memberDao.selectOne(conn, memberId);
 		close(conn);
 		return member;
 	}
@@ -24,6 +24,24 @@ public class MemberService {
 	public int memberEnroll(Member member) {
 		Connection conn = getConnection();
 		int result = memberDao.memberEnroll(conn, member);
+		if(result > 0) commit(conn);
+		else rollback(conn);
+		close(conn);
+		return result;
+	}
+
+	public int deleteMember(String memberId) {
+		Connection conn = getConnection();
+		int result = memberDao.deleteMember(conn, memberId);
+		if(result > 0) commit(conn);
+		else rollback(conn);
+		close(conn);
+		return result;
+	}
+
+	public int memberUpdate(Member member) {
+		Connection conn = getConnection();
+		int result = memberDao.memberUpdate(conn, member);
 		if(result > 0) commit(conn);
 		else rollback(conn);
 		close(conn);

@@ -51,8 +51,12 @@ create table member(
     
     commit;
 
---drop table member;
+drop table member;
 
 select * from member;
 
-select * from member where member_id = 'honggd' and password = '1234';
+delete from member where member_id = 'simpson5';
+
+select * from member where member_id = 'honggd';
+
+update membere SET field3='수정1', field4='수정2' WHERE  member_id = 'honggd';

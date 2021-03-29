@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ include file="/WEB-INF/views/common/header.jsp" %>
+<form name ="checkIdDuplicateFrm">
+	<input type="hidden" name="memberId" />
+</form>
 <section id=enroll-container>
 	<h2>회원 가입 정보 입력</h2>
 	<form name="memberEnrollFrm" action="" method="post" id="memberEnrollFrm">
@@ -9,6 +12,9 @@
 				<th>아이디<sup>*</sup></th>
 				<td>
 					<input type="text" placeholder="4글자이상" name="memberId" id="memberId_" required>
+					<input type="button" value="중복검사" onclick="checkIdDuplicate();" />
+					<input type="hidden" id="idValid" value="0" />
+					<%-- #idValid 1이면 사용가능한 아이디이고 중복검사함, 0이면 중복검사 전. --%>
 				</td>
 			</tr>
 			<tr>
@@ -77,4 +83,81 @@
 		<input type="reset" value="취소">
 	</form>
 </section>
+
+<script>
+/**
+ * 중복검사 이후 다시 아이디를 변경하는 것을 방지.
+ */
+$("#memberId_").change(function() {
+	$("#idValid").val(0);
+})
+
+
+/**
+ * 아이디 중복 검사함수
+ * 팝업창으로 [name = checkIdDuplicateFrm]을 제출한다.
+ * 현재 페이지에 머물면서 서버통신하기 위함.
+ */
+function checkIdDuplicate() {
+	var $memberId = $("#memberId_");
+	if(/^.{4,}$/.test($memberId.val()) == false){
+		alert("유효한 아이디를 입력해주세요")
+		$memberId.select();
+		return;
+	}
+
+	//1.팝업생성
+	//popup Window객체의 name속성 : checkIdDuplicatePopup
+	var title = "checkIdDuplicatePopup";
+    open("", title, "width=300px, height=200px, left=200px, top=200px");
+	
+	//2.폼제출
+	$frm = $(document.checkIdDuplicateFrm);
+	$frm.find("[name=memberId]").val($memberId.val()); // 사용자 입력 id세팅
+	
+	$frm.attr("action", "<%= request.getContextPath() %>/member/checkIdDuplicate")
+		.attr("method", "POST")
+		.attr("target", title) //popup과 form을 연결
+		.submit();
+}
+
+
+$("#memberEnrollFrm").submit(function() {
+	var id = $("#memberId_").val();
+	var password = $("#password_").val();
+	var password_check = $("#password2").val();
+	var phone = $("#phone").val();
+	
+	if(/^.{4,}$/.test(id) == false) {
+       alert("아이디가 유효하지 않습니다.");
+       return false;
+    }
+	
+	if(/^.{4,}$/.test(password) == false) {
+	   alert("비밀번호가 유효하지 않습니다.");
+	   return false;
+	}
+	
+	if(password !=password_check) {
+		alert("위와 다릅니다");
+		return false;
+	}
+	
+	if(/^[0-9]{0,11}$/.test(phone) == false) {
+		alert("전화번호는 숫자로만 적어주세요");
+		return false;
+	}
+	
+	var $idValid = $("#idValid");
+	
+	if($idValid.val() == 0){
+		alert("아이디 중복검사 해주세요")
+		$idValid.prev().focus();
+		return false;
+	}
+	
+	return true;
+});
+</script>
+
 <%@ include file="/WEB-INF/views/common/footer.jsp" %>

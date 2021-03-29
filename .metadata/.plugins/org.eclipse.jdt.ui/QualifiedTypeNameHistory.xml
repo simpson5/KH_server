@@ -15,14 +15,19 @@
 <fullyQualifiedTypeName name="com.simpson.model.service.MemberService"/>
 <fullyQualifiedTypeName name="com.simpson.model.exception.MemberException"/>
 <fullyQualifiedTypeName name="com.simpson.model.vo.Member"/>
-<fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
 <fullyQualifiedTypeName name="java.sql.Connection"/>
 <fullyQualifiedTypeName name="common.JDBCTemplate"/>
 <fullyQualifiedTypeName name="java.util.Properties"/>
 <fullyQualifiedTypeName name="java.io.FileReader"/>
-<fullyQualifiedTypeName name="java.sql.Date"/>
 <fullyQualifiedTypeName name="member.model.exception.MemberException"/>
-<fullyQualifiedTypeName name="member.model.vo.Member"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpSessionBindingListener"/>
+<fullyQualifiedTypeName name="javax.servlet.http.Cookie"/>
+<fullyQualifiedTypeName name="java.util.Calendar"/>
+<fullyQualifiedTypeName name="java.sql.Date"/>
+<fullyQualifiedTypeName name="sun.rmi.server.Dispatcher"/>
+<fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+<fullyQualifiedTypeName name="member.model.vo.Member"/>
+<fullyQualifiedTypeName name="member.model.service.MemberService"/>
 </qualifiedTypeNameHistroy>

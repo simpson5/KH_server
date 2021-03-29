@@ -6,8 +6,10 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="_jsp"/>
+		<item key="selection" value="frm"/>
 		<list key="findhistory">
+			<item value="loca"/>
+			<item value="frm"/>
 			<item value="jsp"/>
 		</list>
 		<list key="replacehistory">

@@ -62,34 +62,6 @@ $(function(){
 			return false;
 		}
 	});
-	
-	$("#memberEnrollFrm").submit(function() {
-		var id = $("#memberId_").val();
-		var password = $("#password_").val();
-		var password_check = $("#password2").val();
-		var phone = $("#phone").val();
-		
-		if(/^.{4,}$/.test(id) == false) {
-	       alert("아이디가 유효하지 않습니다.");
-	       return false;
-	    }
-		
-		if(/^.{4,}$/.test(password) == false) {
-		   alert("비밀번호가 유효하지 않습니다.");
-		   return false;
-		}
-		
-		if(password !=password_check) {
-			alert("위와 다릅니다");
-			return false;
-		}
-		
-		if(/^[0-9]{0,11}$/.test(phone) == false) {
-			alert("전화번호는 숫자로만 적어주세요");
-			return false;
-		}
-		return true;
-	});
 });
 </script>
 </head>
@@ -134,7 +106,8 @@ $(function(){
 					</tr>
 					<tr>
 						<td>
-							<input type="button" value="내정보보기">
+							<input type="button" value="내정보보기"
+								onclick="location.href='<%=request.getContextPath()%>/member/memberView';">
 							<input type="button" value="로그아웃"
 								onclick="location.href='<%=request.getContextPath()%>/member/logout';">
 						</td>

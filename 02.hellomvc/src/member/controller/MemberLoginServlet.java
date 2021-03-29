@@ -44,7 +44,7 @@ public class MemberLoginServlet extends HttpServlet {
 		
 
 		// 3. 업무로직 : memebrId로 회원객체를 조회
-		Member member = memberService.selectOne(memberId, password);
+		Member member = memberService.selectOne(memberId);
 
 		System.out.println("member@servlet = " + member);
 

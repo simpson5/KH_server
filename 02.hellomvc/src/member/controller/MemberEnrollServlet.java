@@ -51,11 +51,11 @@ public class MemberEnrollServlet extends HttpServlet {
 		String birthday_string = request.getParameter("birthday");
 		String email = request.getParameter("email");
 		String phone = request.getParameter("phone");
-		String address = request.getParameter("email");
+		String address = request.getParameter("address");
 		String[] hobbys = request.getParameterValues("hobby");
 		String memberRole = memberService.MEMBER_ROLE;
 		Date enrolldate = new Date(new java.util.Date().getTime());
-		String hobby = "";
+		String hobby = ""; //db에는 null로 처리된다.
 		
 		for(int i = 0; i < hobbys.length; i++) {
 			hobby += hobbys[i];
@@ -64,17 +64,14 @@ public class MemberEnrollServlet extends HttpServlet {
 			}
 		}
 		
-		DateFormat dateFormat = new SimpleDateFormat ("yyyy-MM-dd");
-		
-		Date birthday =new Date(new java.util.Date().getTime());
+		Date birthday = Date.valueOf(birthday_string);
 		
 		//예외 처리 왜 하는거지?
-		try {
-			birthday = new Date(dateFormat.parse(birthday_string).getTime());
-		} catch (ParseException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
+//		try {
+//			birthday = new Date(dateFormat.parse(birthday_string).getTime());
+//		} catch (ParseException e1) {
+//			e1.printStackTrace();
+//		}
 		
 		Member member = new Member(memberId, password, memberName, memberRole, gender, birthday, email, phone, address, hobby, enrolldate);
 		

@@ -57,6 +57,10 @@ public class Member implements HttpSessionBindingListener{
 		this.hobby = hobby;
 	}
 	
+	public Member() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public String getMemberID() {
 		return memberId;
 	}
