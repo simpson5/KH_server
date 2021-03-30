@@ -6,7 +6,6 @@
 <%@ include file="/WEB-INF/views/common/header.jsp"%>
 <%
 	String memberId =loginMember.getMemberID();
-	String password = loginMember.getPassword();
 	String memberName = loginMember.getMemberName();
 	Date birthday = loginMember.getBirthday();
 	String email = loginMember.getEmail() != null ? loginMember.getEmail() : "";
@@ -26,7 +25,6 @@
 
 <form name ="memberDeleteFrm">
 	<input type="hidden" name="memberId" />
-	<input type="hidden" name="password" />
 </form>
 
 <section id="enroll-container">
@@ -37,16 +35,6 @@
 				<th>아이디</th>
 				<td><input type="text" name="memberId" id="memberId_"
 					value="<%= memberId %>" readonly /></td>
-			</tr>
-			<tr>
-				<th>패스워드</th>
-				<td><input type="password" name="password" id="password_"
-					value="<%= password %>" required /></td>
-			</tr>
-			<tr>
-				<th>패스워드확인</th>
-				<td><input type="password" id="password2"
-					value="<%= password %>" required /><br /></td>
 			</tr>
 			<tr>
 				<th>이름</th>
@@ -105,6 +93,7 @@
 			</tr>
 		</table>
 		<input type="submit" onclick="updateMember();" value="정보수정" />
+		<input type="button" onclick="updatePassword();" value="비밀번호 변경" />
 		<input type="button" onclick="deleteMember();" value="탈퇴"/>
 	</form>
 <script>
@@ -120,28 +109,12 @@
       });
     }
   }); --%>
-  
-function checkPassword(){
-	var $password = $("#password_");
-	var $password2 = $("#password2");
-	if($password.val() != <%= password %>){
-		alert("패스워드가 틀립니다.")
-		$password.select();
-		return;
-	}
-	if($password.val() != $password2.val()){
-		alert("패스워드 확인을 다시 입력해주세요.")
-		$password2.select();
-		return;
-	}
-}  
+ 
+function updatePassword() {
+	location.href = "<%= request.getContextPath()%>/member/updatePassword"
+}
   
 function deleteMember(){
-	console.log("deleteMember");
-	
-	//비밀번호 검사
-	checkPassword();
-	
 	//폼제출
 	var $memberId = $("#memberId_");
 	$frm = $(document.memberDeleteFrm);
@@ -153,9 +126,6 @@ function deleteMember(){
 }
 
 function updateMember(){
-	//비밀번호 검사
-	checkPassword();
-	
 	//유효성 검사
 	var phone = $("#phone").val();
 	if(/^[0-9]{0,11}$/.test(phone) == false) {

@@ -35,7 +35,7 @@ public class MemberUpdateServlet extends HttpServlet {
 
 		// 2. 값 자겨오기
 		String memberId = request.getParameter("memberId");
-		String password = request.getParameter("password");
+		String password = null;
 		String memberName = request.getParameter("memberName");
 		String gender = request.getParameter("gender");
 		String birthday_string = request.getParameter("birthday");
@@ -58,14 +58,6 @@ public class MemberUpdateServlet extends HttpServlet {
 
 		Date birthday = Date.valueOf(birthday_string);
 
-		// 예외 처리 왜 하는거지?
-//		try {
-//			birthday = new Date(dateFormat.parse(birthday_string).getTime());
-//		} catch (ParseException e1) {
-//			// TODO Auto-generated catch block
-//			e1.printStackTrace();
-//		}
-
 		Member member = new Member(memberId, password, memberName, memberRole, gender, birthday, email, phone, address,
 				hobby, enrolldate);
 
@@ -78,9 +70,8 @@ public class MemberUpdateServlet extends HttpServlet {
 		if (result == 1) {
 			session.setAttribute("msg2", "회원정보 수정 성공");
 			response.sendRedirect(request.getContextPath());
+			//세션의 정보도 갱신
 			session.setAttribute("loginMember", member);
-			System.out.println("수정전@servlet" + (Member)session.getAttribute("loginMember"));
-			System.out.println("수정후@servlet" + member);
 		} else {
 			session.setAttribute("msg2", "회원정보 수정 실패");
 			request.getRequestDispatcher("/WEB-INF/views/member/memberView.jsp").forward(request, response);

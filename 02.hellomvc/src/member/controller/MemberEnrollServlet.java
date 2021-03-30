@@ -2,9 +2,6 @@ package member.controller;
 
 import java.io.IOException;
 import java.sql.Date;
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import common.MvcUtils;
 import member.model.exception.MemberException;
 import member.model.service.MemberService;
 import member.model.vo.Member;
@@ -39,13 +37,13 @@ public class MemberEnrollServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		// 1. encoding처리
-		request.setCharacterEncoding("utf-8");
+		// filter에서 처리했다.
 		
 		// 2. 값 자겨오기
 		MemberService memberService = new MemberService();
 		
 		String memberId = request.getParameter("memberId");
-		String password = request.getParameter("password");
+		String password = MvcUtils.getSha512(request.getParameter("password"));
 		String memberName = request.getParameter("memberName");
 		String gender = request.getParameter("gender");
 		String birthday_string = request.getParameter("birthday");

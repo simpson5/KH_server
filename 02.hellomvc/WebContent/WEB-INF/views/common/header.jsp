@@ -4,7 +4,7 @@
 
 <%
 	//현재 로그인한 멤버 정보
-	System.out.println("member@header.jsp = " + (Member)session.getAttribute("loginMember"));
+	//System.out.println("member@header.jsp = " + (Member)session.getAttribute("loginMember"));
 
 	String msg = (String)session.getAttribute("msg");
 	//세션에서 msg를 지워버린다. 하지만 html msg는 남아있다.
@@ -23,7 +23,7 @@
 		for(Cookie c : cookies){
 			String name = c.getName();
 			String value = c.getValue();
-			System.out.println(name + " : " + value);
+			//System.out.println(name + " : " + value);
 			if("saveId".equals(name))
 				saveId = value;
 		}

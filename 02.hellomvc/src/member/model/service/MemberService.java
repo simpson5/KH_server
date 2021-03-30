@@ -47,4 +47,13 @@ public class MemberService {
 		close(conn);
 		return result;
 	}
+
+	public int updatePassword(String memberId, String newPassword) {
+		Connection conn = getConnection();
+		int result = memberDao.updatePassword(conn, memberId, newPassword);
+		if(result > 0) commit(conn);
+		else rollback(conn);
+		close(conn);
+		return result;
+	}
 }

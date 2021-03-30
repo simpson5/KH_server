@@ -162,4 +162,27 @@ public class MemberDao {
 		return result;
 	}
 
+	public int updatePassword(Connection conn, String memberId, String newPassword) {
+		PreparedStatement pstmt = null;
+		int result = 0;
+		String sql = prop.getProperty("updatePassword");
+		try {
+			//3. PreparedStatement 객체 생성 (미완성 쿼리)
+			//3.1 ? 값 대임
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, newPassword);
+			pstmt.setString(2, memberId);
+			
+			//4. 실행 : DML(executeUpdate) -> int, DQL(excuteQuery) -> ResultSet
+			//4.1 ResultSet -> Java 객체 옮겨담기
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			throw new MemberException("비밀번호 수정", e);
+		} finally {
+			//5. 자원반납(생성역순 rset - pstmt)
+			close(pstmt);
+		}
+		return result;
+	}
+
 }

@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import common.MvcUtils;
 import member.model.service.MemberService;
 import member.model.vo.Member;
 
@@ -36,17 +37,17 @@ public class MemberLoginServlet extends HttpServlet {
 
 		// 2. 사용자 입력값 처리
 		String memberId = request.getParameter("memberId");
-		String password = request.getParameter("password");
+		String password = MvcUtils.getSha512(request.getParameter("password"));
 		String saveId = request.getParameter("saveId");
-		System.out.println("memeberId@servlet = " + memberId);
-		System.out.println("password@servlet = " + password);
-		System.out.println("saveId@servlet = " + saveId);
+		//System.out.println("memeberId@servlet = " + memberId);
+		//System.out.println("password@servlet = " + password);
+		//System.out.println("saveId@servlet = " + saveId);
 		
 
 		// 3. 업무로직 : memebrId로 회원객체를 조회
 		Member member = memberService.selectOne(memberId);
 
-		System.out.println("member@servlet = " + member);
+		//System.out.println("member@servlet = " + member);
 
 		// 로그인 성공 / 실패여부 판단
 		// 1. 로그인 성공 : member != null && password.equals(member.getPassword())

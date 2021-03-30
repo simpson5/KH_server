@@ -35,6 +35,7 @@ public class MemberDeleteServlet extends HttpServlet {
 			session.setAttribute("msg2", "탈퇴성공");
 			session.removeAttribute("loginMember");
 			response.sendRedirect(request.getContextPath());
+			//logout페이지 지정
 		} else {
 			session.setAttribute("msg2", "탈퇴실패");
 			request.getRequestDispatcher("/WEB-INF/views/member/memberView.jsp")

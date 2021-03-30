@@ -58,5 +58,3 @@ select * from member;
 delete from member where member_id = 'simpson5';
 
 select * from member where member_id = 'honggd';
-
-update membere SET field3='수정1', field4='수정2' WHERE  member_id = 'honggd';
