@@ -38,7 +38,7 @@ public class UpdatePasswordServlet extends HttpServlet {
 	 * 비밀번호 변경처리
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//1. 비밀번호 가져오기
+		//1. 비밀번호 가져오기 암호화 처리 필수
 		String password = MvcUtils.getSha512(request.getParameter("password"));
 		System.out.println("jspPassword@servlet = "+password);
 		String newPassword = MvcUtils.getSha512(request.getParameter("newPassword"));
@@ -56,6 +56,7 @@ public class UpdatePasswordServlet extends HttpServlet {
 		String msg = null;
 		int result = 0;
 		if(password.equals(member.getPassword())) {
+			//비밀번호 수정
 			result = new MemberService().updatePassword(memberId, newPassword);
 			if(result > 0) {
 				msg = "비밀번호를 성공적으로 변경했습니다.";

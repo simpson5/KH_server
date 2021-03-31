@@ -73,14 +73,14 @@ public class MemberEnrollServlet extends HttpServlet {
 		try {
 			result = memberService.memberEnroll(member);
 		} catch(MemberException e) {
-			session.setAttribute("msg2", "가입실패");
+			session.setAttribute("msg", "가입실패");
 			request.getRequestDispatcher("/WEB-INF/views/member/memberEnroll.jsp")
 			       .forward(request, response);
 		}
 		
 		//4. result 값을 seccion으로 저장한뒤 리다이렉트
 		if(result == 1) {
-			session.setAttribute("msg2", "가입성공");
+			session.setAttribute("msg", "가입성공");
 			response.sendRedirect(request.getContextPath());
 		}
 	}

@@ -49,12 +49,19 @@ create table member(
 		'admin@naver.com', '01056785678', '서울시 관악구', '게임,독서', default
 	);
     
-    commit;
+--    commit;
 
 drop table member;
 
 select * from member;
 
-delete from member where member_id = 'simpson5';
+select * from member order by enroll_date desc;
+
+select * from member where member_id like '%s%';
+
+delete from member where member_id = 'samson';
 
 select * from member where member_id = 'honggd';
+
+update member
+set password = '1ARVn2Auq2/WAqx2gNrL+q3RNjAzXpUfCXrzkA6d4Xa22yhRLy4AC50E+6UTPoscbo31nbOoq51gvkuXzJ6B2w==';

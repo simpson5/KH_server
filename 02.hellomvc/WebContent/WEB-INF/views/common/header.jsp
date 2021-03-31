@@ -1,17 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" %>
 <%@page import="member.model.vo.Member"%>
+<%@page import="member.model.service.MemberService"%>
 
 <%
 	//현재 로그인한 멤버 정보
-	//System.out.println("member@header.jsp = " + (Member)session.getAttribute("loginMember"));
+	System.out.println("member@header.jsp = " + (Member)session.getAttribute("loginMember"));
 
 	String msg = (String)session.getAttribute("msg");
 	//세션에서 msg를 지워버린다. 하지만 html msg는 남아있다.
 	if(msg != null) session.removeAttribute("msg");
-	
-	String msg2 = (String)session.getAttribute("msg2");
-	if(msg2 != null) session.removeAttribute("msg2");
 	
 	String loc = (String)request.getAttribute("loc");
 	Member loginMember = (Member)session.getAttribute("loginMember");
@@ -40,8 +38,6 @@
 <script src="<%=request.getContextPath()%>/js/jquery-3.6.0.js"></script>
 <script>
 <% if(msg != null) { %> alert("<%= msg %>"); <% } %>
-
-<% if(msg2 != null) { %> alert("<%= msg2 %>"); <% } %>
 
 <% if(loc != null) { %> location.href = "<%= loc %>"; <% } %>
 
@@ -124,6 +120,9 @@ $(function(){
 					<li class="home"><a href="<%=request.getContextPath()%>">Home</a></li>
 					<li class="notice"><a href="#">공지사항</a></li>
 					<li class="board"><a href="#">게시판</a></li>
+					<% if(loginMember != null && MemberService.ADMIN_ROLE.equals(loginMember.getMemberRole())){ %>
+					<li class="members"><a href="<%=request.getContextPath()%>/admin/memberList">회원관리</a></li>
+					<% } %>
 				</ul>
 			</nav>
 			<!-- 메인메뉴 끝-->

@@ -8,6 +8,7 @@
 		<item key="isRegEx" value="false"/>
 		<item key="selection" value="frm"/>
 		<list key="findhistory">
+			<item value="password"/>
 			<item value="loca"/>
 			<item value="frm"/>
 			<item value="jsp"/>

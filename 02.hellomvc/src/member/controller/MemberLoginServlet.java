@@ -62,6 +62,7 @@ public class MemberLoginServlet extends HttpServlet {
 			// 로그인한 사용자 정보
 			// request.getSession(create:boolean) : 새로 생성여부 기본값 true
 			// System.out.println(session.getId());
+			member.setPassword(null);
 			session.setAttribute("loginMember", member);
 
 			// session timeout : web.xml보다 우선순위 높음

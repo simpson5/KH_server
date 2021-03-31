@@ -68,12 +68,12 @@ public class MemberUpdateServlet extends HttpServlet {
 
 		// 4. result 값을 seccion으로 저장한뒤 리다이렉트
 		if (result == 1) {
-			session.setAttribute("msg2", "회원정보 수정 성공");
+			session.setAttribute("msg", "회원정보 수정 성공");
 			response.sendRedirect(request.getContextPath());
 			//세션의 정보도 갱신
 			session.setAttribute("loginMember", member);
 		} else {
-			session.setAttribute("msg2", "회원정보 수정 실패");
+			session.setAttribute("msg", "회원정보 수정 실패");
 			request.getRequestDispatcher("/WEB-INF/views/member/memberView.jsp").forward(request, response);
 		}
 	}
