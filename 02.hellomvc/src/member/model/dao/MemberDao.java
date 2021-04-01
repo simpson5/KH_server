@@ -29,8 +29,8 @@ public class MemberDao {
 	 */
 	public MemberDao() {
 		String fileName = this.getClass() // 클래스 객체
-							  .getResource("/sql/member/member-query.properties") // Url 객체
-							  .getPath(); // String 객체 : 절대경로
+				.getResource("/sql/member/member-query.properties") // Url 객체
+				.getPath(); // String 객체 : 절대경로
 		try {
 			prop.load(new FileReader(fileName));
 		} catch (FileNotFoundException e) {
@@ -44,18 +44,18 @@ public class MemberDao {
 		Member member = null;
 		PreparedStatement pstmt = null;
 		ResultSet rset = null;
-		
+
 		String query = prop.getProperty("selectOne");
-		
-		try{
-			//미완성쿼리문을 가지고 객체생성.
+
+		try {
+			// 미완성쿼리문을 가지고 객체생성.
 			pstmt = conn.prepareStatement(query);
-			//미완성 쿼리문 값대입
+			// 미완성 쿼리문 값대입
 			pstmt.setString(1, memberId);
-			//쿼리문실행
+			// 쿼리문실행
 			rset = pstmt.executeQuery();
 
-			if(rset.next()){
+			if (rset.next()) {
 				member = new Member();
 				member.setMemberID(rset.getString("member_id"));
 				member.setPassword(rset.getString("password"));
@@ -68,12 +68,12 @@ public class MemberDao {
 				member.setAddress(rset.getString("address"));
 				member.setHobby(rset.getString("hobby"));
 				member.setEnrolldate(rset.getDate("enroll_date"));
-				
+
 				System.out.println(member);
 			}
-		}catch (SQLException e) {
+		} catch (SQLException e) {
 			throw new MemberException("회원 확인", e);
-		}finally{
+		} finally {
 			close(rset);
 			close(pstmt);
 		}
@@ -87,8 +87,8 @@ public class MemberDao {
 		int result = 0;
 		String sql = prop.getProperty("memberEnroll");
 		try {
-			//3. PreparedStatement 객체 생성 (미완성 쿼리)
-			//3.1 ? 값 대임
+			// 3. PreparedStatement 객체 생성 (미완성 쿼리)
+			// 3.1 ? 값 대임
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, member.getMemberID());
 			pstmt.setString(2, member.getPassword());
@@ -101,20 +101,20 @@ public class MemberDao {
 			pstmt.setString(9, member.getAddress());
 			pstmt.setString(10, member.getHobby());
 			pstmt.setDate(11, member.getEnrolldate());
-			
-			//4. 실행 : DML(executeUpdate) -> int, DQL(excuteQuery) -> ResultSet
-			//4.1 ResultSet -> Java 객체 옮겨담기
+
+			// 4. 실행 : DML(executeUpdate) -> int, DQL(excuteQuery) -> ResultSet
+			// 4.1 ResultSet -> Java 객체 옮겨담기
 			result = pstmt.executeUpdate();
 		} catch (SQLException e) {
 			throw new MemberException("회원 가입", e);
 		} finally {
-			//5. 자원반납(생성역순 rset - pstmt)
+			// 5. 자원반납(생성역순 rset - pstmt)
 			close(pstmt);
 		}
 		return result;
 	}
 
-	//회원 탈퇴
+	// 회원 탈퇴
 	public int deleteMember(Connection conn, String memberId) {
 		PreparedStatement pstmt = null;
 		int result = 0;
@@ -141,8 +141,8 @@ public class MemberDao {
 		int result = 0;
 		String sql = prop.getProperty("memberUpdate");
 		try {
-			//3. PreparedStatement 객체 생성 (미완성 쿼리)
-			//3.1 ? 값 대임
+			// 3. PreparedStatement 객체 생성 (미완성 쿼리)
+			// 3.1 ? 값 대임
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, member.getMemberName());
 			pstmt.setString(2, member.getGender());
@@ -152,14 +152,14 @@ public class MemberDao {
 			pstmt.setString(6, member.getAddress());
 			pstmt.setString(7, member.getHobby());
 			pstmt.setString(8, member.getMemberID());
-			
-			//4. 실행 : DML(executeUpdate) -> int, DQL(excuteQuery) -> ResultSet
-			//4.1 ResultSet -> Java 객체 옮겨담기
+
+			// 4. 실행 : DML(executeUpdate) -> int, DQL(excuteQuery) -> ResultSet
+			// 4.1 ResultSet -> Java 객체 옮겨담기
 			result = pstmt.executeUpdate();
 		} catch (SQLException e) {
 			throw new MemberException("회원 수정", e);
 		} finally {
-			//5. 자원반납(생성역순 rset - pstmt)
+			// 5. 자원반납(생성역순 rset - pstmt)
 			close(pstmt);
 		}
 		return result;
@@ -170,19 +170,19 @@ public class MemberDao {
 		int result = 0;
 		String sql = prop.getProperty("updatePassword");
 		try {
-			//3. PreparedStatement 객체 생성 (미완성 쿼리)
-			//3.1 ? 값 대임
+			// 3. PreparedStatement 객체 생성 (미완성 쿼리)
+			// 3.1 ? 값 대임
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, newPassword);
 			pstmt.setString(2, memberId);
-			
-			//4. 실행 : DML(executeUpdate) -> int, DQL(excuteQuery) -> ResultSet
-			//4.1 ResultSet -> Java 객체 옮겨담기
+
+			// 4. 실행 : DML(executeUpdate) -> int, DQL(excuteQuery) -> ResultSet
+			// 4.1 ResultSet -> Java 객체 옮겨담기
 			result = pstmt.executeUpdate();
 		} catch (SQLException e) {
 			throw new MemberException("비밀번호 수정", e);
 		} finally {
-			//5. 자원반납(생성역순 rset - pstmt)
+			// 5. 자원반납(생성역순 rset - pstmt)
 			close(pstmt);
 		}
 		return result;
@@ -192,18 +192,18 @@ public class MemberDao {
 		List<Member> list = new ArrayList<>();
 		PreparedStatement pstmt = null;
 		ResultSet rset = null;
-		
+
 		String query = prop.getProperty("selectList");
-		
-		try{
-			//미완성쿼리문을 가지고 객체생성.
+
+		try {
+			// 미완성쿼리문을 가지고 객체생성.
 			pstmt = conn.prepareStatement(query);
-			//미완성 쿼리문 값대입
-			//쿼리문실행
+			// 미완성 쿼리문 값대입
+			// 쿼리문실행
 			rset = pstmt.executeQuery();
 
-			//전체조회는 while 문으로
-			while(rset.next()){
+			// 전체조회는 while 문으로
+			while (rset.next()) {
 				Member member = new Member();
 				member.setMemberID(rset.getString("member_id"));
 				member.setPassword(rset.getString("password"));
@@ -216,12 +216,12 @@ public class MemberDao {
 				member.setAddress(rset.getString("address"));
 				member.setHobby(rset.getString("hobby"));
 				member.setEnrolldate(rset.getDate("enroll_date"));
-				
+
 				list.add(member);
 			}
-		}catch (SQLException e) {
+		} catch (SQLException e) {
 			throw new MemberException("전체 회원 조회", e);
-		}finally{
+		} finally {
 			close(rset);
 			close(pstmt);
 		}
@@ -233,52 +233,56 @@ public class MemberDao {
 		int result = 0;
 		String sql = prop.getProperty("memberRoleUpdate");
 		try {
-			//3. PreparedStatement 객체 생성 (미완성 쿼리)
-			//3.1 ? 값 대임
+			// 3. PreparedStatement 객체 생성 (미완성 쿼리)
+			// 3.1 ? 값 대임
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, memberRole);
 			pstmt.setString(2, memberId);
-			
-			//4. 실행 : DML(executeUpdate) -> int, DQL(excuteQuery) -> ResultSet
-			//4.1 ResultSet -> Java 객체 옮겨담기
+
+			// 4. 실행 : DML(executeUpdate) -> int, DQL(excuteQuery) -> ResultSet
+			// 4.1 ResultSet -> Java 객체 옮겨담기
 			result = pstmt.executeUpdate();
 		} catch (SQLException e) {
 			throw new MemberException("비밀번호 수정", e);
 		} finally {
-			//5. 자원반납(생성역순 rset - pstmt)
+			// 5. 자원반납(생성역순 rset - pstmt)
 			close(pstmt);
 		}
 		return result;
 	}
 
-	public List<Member> searchMember(Connection conn, Map<String, String> param) {
+	//검색 회원 조회
+	public List<Member> searchMember(Connection conn, Map<String, String> param, int start, int end) {
 		List<Member> list = new ArrayList<>();
 		PreparedStatement pstmt = null;
 		ResultSet rset = null;
-		
+
 		String query = prop.getProperty("searchMember");
-		
-		switch((String)param.get("searchType")) {
-			case "memberId" :
-				query += " member_id like '%" + param.get("searchKeyword") + "%'";
-				break;
-			case "memberName" :
-				query += " member_name like '%" + param.get("searchKeyword") + "%'";
-				break;
-			case "gender" :
-				query += " gender = '" + param.get("searchKeyword") + "'";
-				break;
+
+		switch ((String) param.get("searchType")) {
+		case "memberId":
+			query += " member_id like '%" + param.get("searchKeyword") + "%'";
+			break;
+		case "memberName":
+			query += " member_name like '%" + param.get("searchKeyword") + "%'";
+			break;
+		case "gender":
+			query += " gender = '" + param.get("searchKeyword") + "'";
+			break;
 		}
+		query = "select * from(select rownum rnum, M.* from ("
+				+ query + ") M ) M where rnum between "
+				+ start + " and " + end;
 		System.out.println("query@dao = " + query);
-		try{
-			//미완성쿼리문을 가지고 객체생성.
+		try {
+			// 미완성쿼리문을 가지고 객체생성.
 			pstmt = conn.prepareStatement(query);
-			//미완성 쿼리문 값대입
-			//쿼리문실행
+			// 미완성 쿼리문 값대입
+			// 쿼리문실행
 			rset = pstmt.executeQuery();
 
-			//전체조회는 while 문으로
-			while(rset.next()){
+			// 전체조회는 while 문으로
+			while (rset.next()) {
 				Member member = new Member();
 				member.setMemberID(rset.getString("member_id"));
 				member.setPassword(rset.getString("password"));
@@ -291,16 +295,121 @@ public class MemberDao {
 				member.setAddress(rset.getString("address"));
 				member.setHobby(rset.getString("hobby"));
 				member.setEnrolldate(rset.getDate("enroll_date"));
-				
+
 				list.add(member);
 			}
-		}catch (SQLException e) {
-			throw new MemberException("전체 회원 조회", e);
-		}finally{
+		} catch (SQLException e) {
+			throw new MemberException("검색 회원 조회", e);
+		} finally {
 			close(rset);
 			close(pstmt);
 		}
 		return list;
 	}
 
+	//전체 회원 조회
+	public List<Member> selectList(Connection conn, int start, int end) {
+		List<Member> list = new ArrayList<>();
+		PreparedStatement pstmt = null;
+		ResultSet rset = null;
+
+		String query = prop.getProperty("selectPagedList");
+
+		try {
+			// 미완성쿼리문을 가지고 객체생성.
+			pstmt = conn.prepareStatement(query);
+			// 미완성 쿼리문 값대입
+			pstmt.setInt(1, start);
+			pstmt.setInt(2, end);
+			// 쿼리문실행
+			rset = pstmt.executeQuery();
+
+			// 전체조회는 while 문으로
+			while (rset.next()) {
+				Member member = new Member();
+				member.setMemberID(rset.getString("member_id"));
+				member.setPassword(rset.getString("password"));
+				member.setMemberName(rset.getString("member_name"));
+				member.setMemberRole(rset.getString("member_role"));
+				member.setGender(rset.getString("gender"));
+				member.setBirthday(rset.getDate("birthday"));
+				member.setEmail(rset.getString("email"));
+				member.setPhone(rset.getString("phone"));
+				member.setAddress(rset.getString("address"));
+				member.setHobby(rset.getString("hobby"));
+				member.setEnrolldate(rset.getDate("enroll_date"));
+
+				list.add(member);
+			}
+		} catch (SQLException e) {
+			throw new MemberException("전체 회원 조회", e);
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		return list;
+	}
+
+	public int selectMemberCount(Connection conn) {
+		int totalContens = 0;
+		PreparedStatement pstmt = null;
+		ResultSet rset = null;
+		String query = prop.getProperty("selectMemberCount");
+
+		try {
+			// 미완성쿼리문을 가지고 객체생성.
+			pstmt = conn.prepareStatement(query);
+			// 미완성 쿼리문 값대입
+			// 쿼리문실행
+			rset = pstmt.executeQuery();
+
+			if (rset.next()) {
+				totalContens = rset.getInt("cnt");
+			}
+		} catch (SQLException e) {
+			throw new MemberException("회원 확인", e);
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		return totalContens;
+	}
+
+	public int selectMemberCount(Connection conn, Map<String, String> param) {
+		int totalContens = 0;
+		PreparedStatement pstmt = null;
+		ResultSet rset = null;
+		String query = prop.getProperty("searchMember");
+
+		switch ((String) param.get("searchType")) {
+		case "memberId":
+			query += " member_id like '%" + param.get("searchKeyword") + "%'";
+			break;
+		case "memberName":
+			query += " member_name like '%" + param.get("searchKeyword") + "%'";
+			break;
+		case "gender":
+			query += " gender = '" + param.get("searchKeyword") + "'";
+			break;
+		}
+		query = "select count(*) cnt from ( " + query + " )";
+
+		try {
+			// 미완성쿼리문을 가지고 객체생성.
+			pstmt = conn.prepareStatement(query);
+			// 미완성 쿼리문 값대입
+			// 쿼리문실행
+			rset = pstmt.executeQuery();
+
+			if (rset.next()) {
+				totalContens = rset.getInt("cnt");
+			}
+		} catch (SQLException e) {
+			throw new MemberException("회원 확인", e);
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		return totalContens;
+	}
 }

@@ -1,5 +1,0 @@
-package com.simpson.model.exception;
-
-public class MemberException extends RuntimeException{
-
-}

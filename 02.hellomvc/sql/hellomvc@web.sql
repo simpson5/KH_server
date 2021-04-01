@@ -64,4 +64,33 @@ delete from member where member_id = 'samson';
 select * from member where member_id = 'honggd';
 
 update member
-set password = '1ARVn2Auq2/WAqx2gNrL+q3RNjAzXpUfCXrzkA6d4Xa22yhRLy4AC50E+6UTPoscbo31nbOoq51gvkuXzJ6B2w==';
+set password = '1ARVn2Auq2/WAqx2gNrL+q3RNjAzXpUfCXrzkAd4Xa22yhRLy4AC50E+6UTPoscbo31nbOoq51gvkuXzJ6B2w==';
+
+-- 페이징
+--1. rownum 행추가시 자동으로 부여되는 no
+select *
+from(
+        select rownum rnum, M.*
+        from (
+                select M.*
+                from member M
+                order by enroll_date desc
+                ) M
+        ) M
+where rnum between 11 and 20;
+
+--2. window함수 row_num
+select *
+from(
+        select row_number() over(order by enroll_date desc) rnum, M.*
+        from member M
+        ) M
+where rnum between 11 and 20;
+
+select count(*) cnt from member;
+
+select count(*) cnt from (
+    select * from member where member_id like '%s%'
+);
+
+select * from(select rownum rnum, M.* from (select * from member where member_id like '%s%') M ) M where rnum between 1 and 10;
