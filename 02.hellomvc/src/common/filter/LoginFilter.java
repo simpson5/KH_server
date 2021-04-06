@@ -21,7 +21,8 @@ import member.model.vo.Member;
 		"/memeber/memverView",
 		"/member/memberUpdate",
 		"/member/memberDelete",
-		"/member/updatePassword"
+		"/member/updatePassword",
+		"/board/boardForm"
 		})
 public class LoginFilter implements Filter {
 	/**

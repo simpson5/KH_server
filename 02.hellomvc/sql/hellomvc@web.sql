@@ -57,7 +57,7 @@ select * from member;
 
 select * from member order by enroll_date desc;
 
-select * from member where member_id like '%s%';
+select * from member where member_id like '%hong%';
 
 delete from member where member_id = 'samson';
 
@@ -94,3 +94,5 @@ select count(*) cnt from (
 );
 
 select * from(select rownum rnum, M.* from (select * from member where member_id like '%s%') M ) M where rnum between 1 and 10;
+
+-- 게시판 테이블

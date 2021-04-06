@@ -40,15 +40,16 @@ public class AdminMemberFinderServlet extends HttpServlet {
 		param.put("searchKeyword", searchKeyword);
 		
 		//사용자 값 저장?
-		HttpSession session = request.getSession();
-		if (param.get("searchType") != null) {
-			session.setAttribute("param", param);			
-			System.out.println("param@servlet"+param.get("searchType"));
-		}
-		else {			
-			param = (Map<String, String>)session.getAttribute("param");
-			System.out.println("param@servlet"+param.get("searchType"));
-		}
+//		HttpSession session = request.getSession();
+//		if (param.get("searchType") != null) {
+//			session.setAttribute("param", param);			
+//			System.out.println("param@servlet = "+param.get("searchType"));
+//		}
+//		else {			
+//			param = (Map<String, String>)session.getAttribute("param");
+//			System.out.println("param@servlet = "+param.get("searchType"));
+//		}
+		
 		//2. 업무로직
 		int end = cPage * numPerPage;
 		int start = end - (numPerPage - 1);
