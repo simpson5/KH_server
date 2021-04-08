@@ -17,8 +17,9 @@ import java.util.Properties;
 import board.model.exception.BoardException;
 import board.model.vo.Attachment;
 import board.model.vo.Board;
+import board.model.vo.BoardComment;
+import board.model.vo.BoardCommentCnt;
 import member.model.exception.MemberException;
-import member.model.vo.Member;
 
 public class BoardDao {
 
@@ -44,8 +45,8 @@ public class BoardDao {
 	}
 
 	//전체 게시판 조회
-	public List<Board> selectList(Connection conn, int start, int end) {
-		List<Board> list = new ArrayList<>();
+	public List<BoardCommentCnt> selectList(Connection conn, int start, int end) {
+		List<BoardCommentCnt> list = new ArrayList<>();
 		PreparedStatement pstmt = null;
 		ResultSet rset = null;
 
@@ -82,9 +83,12 @@ public class BoardDao {
 					attach.setStatus("Y".equals(rset.getString("status")) ? true : false);
 				}
 				
-				Board board = new Board(no, title, writer, content, regDate, readCount, attach);
+				int commentCnt = CommentCnt(conn, no);
 				
-				list.add(board);
+				BoardCommentCnt bcc = new BoardCommentCnt(no, title, writer, content, regDate, readCount, attach);
+				bcc.setCommentCnt(commentCnt);
+				
+				list.add(bcc);
 				
 			}
 		} catch (SQLException e) {
@@ -346,5 +350,124 @@ public class BoardDao {
 			close(pstmt);
 		}
 		return result;
+	}
+
+	public int deleteAttachment(Connection conn, String attachNo) {
+		PreparedStatement pstmt = null;
+		int result = 0;
+		String sql = prop.getProperty("deleteAttachment");
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, attachNo);
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			throw new BoardException("첨부파일 수정 오류", e);
+		} finally {
+			close(pstmt);
+		}
+		return result;
+	}
+
+	public int insertBoardComment(Connection conn, BoardComment bc) {
+		PreparedStatement pstmt = null;
+		int result = 0;
+		String sql = prop.getProperty("insertBoardComment");
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, bc.getCommentLevel());
+			pstmt.setString(2, bc.getWriter());
+			pstmt.setString(3, bc.getContent());
+			pstmt.setInt(4, bc.getBoardNo());
+			pstmt.setObject(5, bc.getCommentRef() == 0 ? null : bc.getCommentRef());
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			throw new BoardException("댓글 등록 오류", e);
+		} finally {
+			close(pstmt);
+		}
+		return result;
+	}
+
+	public List<BoardComment> SelectBoardCommentList(Connection conn, int no) {
+		List<BoardComment> commentlist = new ArrayList<>();
+		PreparedStatement pstmt = null;
+		ResultSet rset = null;
+
+		String query = prop.getProperty("SelectBoardCommentList");
+
+		try {
+			// 미완성쿼리문을 가지고 객체생성.
+			pstmt = conn.prepareStatement(query);
+			// 미완성 쿼리문 값대입
+			pstmt.setInt(1, no);
+			// 쿼리문실행
+			rset = pstmt.executeQuery();
+
+			// 전체조회는 while 문으로
+			while (rset.next()) {
+				int commentNo = rset.getInt("no");
+				int commentLevel = rset.getInt("comment_level");
+				String writer = rset.getString("writer");
+			    String content = rset.getString("content");
+			    int boardNo = rset.getInt("board_no");
+			    int commentRef = rset.getInt("comment_ref");
+			    Date regDate = rset.getDate("reg_date");
+			    
+			    BoardComment bc = new BoardComment(commentNo, commentLevel, writer, content, boardNo, commentRef, regDate);
+				
+			    commentlist.add(bc);
+			}
+		} catch (SQLException e) {
+			throw new MemberException("전체 게시판 조회", e);
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		return commentlist;
+	}
+
+	public int boardCommentDelete(Connection conn, int no) {
+		PreparedStatement pstmt = null;
+		int result = 0;
+		String sql = prop.getProperty("boardCommentDelete");
+		try {
+			// 3. PreparedStatement 객체 생성 (미완성 쿼리)
+			// 3.1 ? 값 대임
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, no);
+
+			// 4. 실행 : DML(executeUpdate) -> int, DQL(excuteQuery) -> ResultSet
+			// 4.1 ResultSet -> Java 객체 옮겨담기
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			throw new BoardException("댓글 삭제 오류", e);
+		} finally {
+			// 5. 자원반납(생성역순 rset - pstmt)
+			close(pstmt);
+		}
+		return result;
+	}
+	
+	private int CommentCnt(Connection conn, int no) {
+		int commentCnt = 0;
+		PreparedStatement pstmt = null;
+		ResultSet rset = null;
+		String query = prop.getProperty("CommentCnt");
+
+		try {
+			pstmt = conn.prepareStatement(query);
+			pstmt.setInt(1, no);
+			rset = pstmt.executeQuery();
+
+			if (rset.next()) {
+				commentCnt = rset.getInt("cnt");
+			}
+		} catch (SQLException e) {
+			throw new BoardException("댓글 수 조회 오류", e);
+		} finally {
+			close(rset);
+			close(pstmt);
+		}
+		return commentCnt;
 	}
 }

@@ -12,14 +12,16 @@ import board.conroller.BoardEnrollServlet;
 import board.model.dao.BoardDao;
 import board.model.vo.Attachment;
 import board.model.vo.Board;
+import board.model.vo.BoardComment;
+import board.model.vo.BoardCommentCnt;
 
 public class BoardService {
 
 	private BoardDao boardDao = new BoardDao();
 
-	public List<Board> selectList(int start, int end) {
+	public List<BoardCommentCnt> selectList(int start, int end) {
 		Connection conn = getConnection();
-		List<Board> list = boardDao.selectList(conn, start, end);
+		List<BoardCommentCnt> list = boardDao.selectList(conn, start, end);
 		close(conn);
 		return list;
 	}
@@ -132,6 +134,60 @@ public class BoardService {
 			rollback(conn);
 			throw e;
 		} finally {			
+			close(conn);
+		}
+		return result;
+	}
+
+	public int deleteAttachment(String attachNo) {
+		Connection conn = getConnection();
+		int result = 0;
+		try {
+			result = boardDao.deleteAttachment(conn, attachNo);
+			commit(conn);
+		} catch(Exception e) {
+			rollback(conn);
+			throw e;
+		} finally {			
+			close(conn);
+		}
+		return result;
+	}
+
+	public int insertBoardComment(BoardComment bc) {
+		Connection conn = getConnection();
+		int result = 0;
+		try {
+			result = boardDao.insertBoardComment(conn, bc);
+			commit(conn);
+		} catch(Exception e) {
+			rollback(conn);
+			throw e;
+		} finally {			
+			close(conn);
+		}
+		return result;
+	}
+
+	public List<BoardComment> SelectBoardCommentList(int no) {
+		Connection conn = getConnection();
+		List<BoardComment> commentlist = boardDao.SelectBoardCommentList(conn, no);
+		close(conn);
+		return commentlist;
+	}
+
+	public int boardCommentDelete(int no) {
+		Connection conn = getConnection();
+		int result = 0;
+		try {
+			result = boardDao.boardCommentDelete(conn, no);
+			if(result == 0)
+				throw new IllegalArgumentException("해당댓글이 존재하지 않습니다. :" + no);
+			commit(conn);
+		} catch (Exception e) {
+			rollback(conn);
+			throw e; // controller가 예외처리를 결정할 수 있도록 넘김.
+		} finally {
 			close(conn);
 		}
 		return result;

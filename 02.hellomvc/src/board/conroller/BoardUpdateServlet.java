@@ -87,6 +87,10 @@ public class BoardUpdateServlet extends HttpServlet {
 			String originalFileName = multipartRequest.getOriginalFileName("upFile");
 			String renamedFileName = multipartRequest.getFilesystemName("upFile");
 			
+			//삭제할 첨부파일 번호
+			String attachNo = multipartRequest.getParameter("delFile");	 
+			System.out.println("attachNo@servlet = " + attachNo);
+			
 			//게시판
 			Board board = new Board();
 			board.setNo(no);
@@ -104,8 +108,13 @@ public class BoardUpdateServlet extends HttpServlet {
 				board.setAttach(attach);
 			}
 
-			//2-2. 업무로직 : db에 insert
-			int result = boardService.updateBoard(board);
+			//2-2. 업무로직 :
+			//첨부파일 삭제
+			int result = 0;
+			if(attachNo != null)
+				result = boardService.deleteAttachment(attachNo);
+			//db에 insert
+			result = boardService.updateBoard(board);
 			String msg = (result > 0) ? "게시글 수정 성공!" : "게시글 수정 실패!";
 			//3. DML요청 : 리다이렉트 & 사용자피드백
 			HttpSession session = request.getSession(true);

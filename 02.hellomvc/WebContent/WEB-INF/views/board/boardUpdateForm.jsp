@@ -31,7 +31,7 @@
 			<input type="file" name="upFile">
 			<% if(b.getAttach() != null) { %>
 			<p style="margin: 5px 0;">
-				<img src="<%=request.getContextPath() %>/imgages/file.png" width="16px"/>
+				<img src="<%=request.getContextPath() %>/images/file.png" width="16px"/>
 				<%= b.getAttach().getOriginalFileName() %>
 				<input type="checkbox" name="delFile" id="delFile" value="<%= b.getAttach().getNo() %>"/>
 				<label for="delFile">삭제</label>
@@ -57,11 +57,15 @@ $("[name=upFile]").change(function() {
 	console.log($(this).val());
 	if($(this).val() != ""){
 		//파일 선택
-		$("#delFile").prop("checked", true);
+		$("#delFile")
+					.prop("checked", true)
+					.on("click",function(){
+						return false;
+					});
 	}
 	else {
 		//파일 선택 취소
-		$("#delFile").prop("checked", false);
+		$("#delFile").prop("checked", false).off('click');
 	}
 });
 

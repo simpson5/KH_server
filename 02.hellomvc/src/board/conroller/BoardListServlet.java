@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import board.model.service.BoardService;
 import board.model.vo.Board;
+import board.model.vo.BoardCommentCnt;
 import common.MvcUtils;
 import member.model.vo.Member;
 
@@ -40,7 +41,7 @@ public class BoardListServlet extends HttpServlet {
 		int start = end - (numPerPage - 1);
 		
 		//조인으로 하는 방법도 생각해보자
-		List<Board> list = boardService.selectList(start, end);
+		List<BoardCommentCnt> list = boardService.selectList(start, end);
 		
 		//b. pagebar 영역 작업
 		int totalContents = boardService.countBoardList();

@@ -1,9 +1,10 @@
+<%@page import="board.model.vo.BoardCommentCnt"%>
 <%@page import="board.model.vo.Board"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <% 
-	List<Board> list = (List<Board>) request.getAttribute("list");
+	List<BoardCommentCnt> list = (List<BoardCommentCnt>) request.getAttribute("list");
 %>
 <%@ include file="/WEB-INF/views/common/header.jsp" %>
 <link rel="stylesheet" href="<%=request.getContextPath()%>/css/board.css" />
@@ -23,7 +24,7 @@
 		</tr>
 	<% 
 	   if(list != null && !list.isEmpty()) { 
-		  for(Board b : list){
+		  for(BoardCommentCnt b : list){
 	%>	
 		<script>
 		<% if(b.getAttach() != null) { %>
@@ -33,7 +34,7 @@
 		<tr>
 			<td><%= b.getNo() %></td>
 			<td>
-				<a href="<%= request.getContextPath() %>/board/boardView?no=<%= b.getNo() %>" name="no"><%= b.getTitle() %></a>
+				<a href="<%= request.getContextPath() %>/board/boardView?no=<%= b.getNo() %>" name="no"><%= b.getTitle() + "[" + b.getCommentCnt() + "]"%></a>
 			</td>
 			<td><%= b.getWriter() %></td>
 			<td><%= b.getRegDate() %></td>

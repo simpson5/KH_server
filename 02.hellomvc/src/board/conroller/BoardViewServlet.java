@@ -1,6 +1,8 @@
 package board.conroller;
 
 import java.io.IOException;
+import java.util.List;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -9,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import board.model.service.BoardService;
 import board.model.vo.Board;
+import board.model.vo.BoardComment;
 import common.MvcUtils;
 
 /**
@@ -43,7 +46,11 @@ public class BoardViewServlet extends HttpServlet {
 		// \n개행문자를 <br />태그로 변경
 		board.setContent(MvcUtils.convertLinFeedToBr(board.getContent()));
 		
+		// 댓글 가져오기
+		List<BoardComment> commentlist = boardService.SelectBoardCommentList(no);
+		
 		//3. jsp forwarding
+		request.setAttribute("commentlist", commentlist);
 		request.setAttribute("board", board);
 		request.getRequestDispatcher("/WEB-INF/views/board/boardView.jsp")
 			   .forward(request, response);

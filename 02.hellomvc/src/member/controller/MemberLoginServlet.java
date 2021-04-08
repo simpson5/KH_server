@@ -91,9 +91,13 @@ public class MemberLoginServlet extends HttpServlet {
 //					request.getRequestDispatcher("/index.jsp");
 //			reqDispatcher.forward(request, response);
 		}
+		
+		//이전 페이지로 리다이렉트 처리
+		String referer =  request.getHeader("Referer");
 
 		// 리다이렉트 : url변경
-		response.sendRedirect(request.getContextPath());
+//		response.sendRedirect(request.getContextPath());
+		response.sendRedirect(referer);
 
 	}
 
