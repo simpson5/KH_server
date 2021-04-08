@@ -1,0 +1,62 @@
+@charset "UTF-8";
+#div-introduction{text-align: center;}
+#div-introduction>h1{position:absolute; left:200px; top:100px; z-index:1; color:white;}
+#div-introduction>div{position:absolute; left:200px; top:200px; z-index:1; color:white;}
+#div-introduction>div>p{float:left;}
+.highlight{font-weight: bold;}
+.highlight:last-of-type{position:relative; top: 110px;}
+div#theaterContainer{margin: 0 auto;}
+#img-theaterInfo{margin: 0 auto; text-align: center;}
+#menu a{text-decoration: none; font-weight: bold; color: black; padding-right: 22px; font-size: 20px; position:relative; top:30px;}
+#menu a:hover{color: gray;}
+a:not(:last-of-type){border-right: 2px solid lightgray;}
+a:not(:first-of-type){padding-left:20px;}
+#div-scheduleOfShow{margin: 0 auto; width: 70%;}
+#div-date{margin-left:30px;}
+.title{display:block; border-left: 6px solid #35256b; padding-left:10px; margin-left:10px; margin-bottom:40px;}
+#menu{text-align: center; height: 50px;}
+#btn-left{width:70px; height:70px;}
+#btn-right{width:50px; height:50px; position: absolute; top: 10px; margin-left: 5px;}
+#date{font-weight: bold; font-size: 35px; position: relative; top: 10px;}
+#btn-ratings{background:white; border: 0; float:right;}
+#schedule{border-top: 1px solid black; border-bottom: 1px solid black; border-collapse: collapse; height:170px; margin-left:40px; width: 1000px;}
+.movie-title, .movie-theater{border-right: 1px solid black; background: rgb(224, 224, 224); font-weight: bold;}
+.movie-title{padding-left:10px; width: 160px; height: 80px !important;}
+.movie-theater{text-align: right; margin-right:30px; padding-right:10px; width: 130px;}
+#schedule td:not(#movie-title):not(#movie-theater){text-align: center;}
+p{display: inline;}
+.jojo{font-size: 13px}
+.time{font-size: 22px}
+.seat{font-size: 15px}
+.reservation{display:none; margin-top:-10px; margin-left: -1px; background:rgb(53, 37, 107); position: absolute; z-index: 10; width: 100%; height: 100%; color:white;}
+.reservation p{position: relative; top: 15px; font-weight: bold;}
+.reservation a{color: white; border: 2px solid white; padding: 3px; text-decoration: none; font-weight: bold; position:relative; top: 30px; border-radius: 5px 5px 5px 5px;}
+#schedule td:hover .reservation{display: block;}
+#ratingInfo{width:130px; display: inline-block; position: relative; left:80px;}
+#img-ratingInfo{width:30px; height:30px;}
+#btn-ratings{position: relative; top: 5px;}
+#rating-title{margin:0; padding:0; border:0; background:rgb(38, 16, 73); height:50px; padding-left:10px;}
+#rating-title h2{color:white; position:relative; top:10px;}
+#movieRating{border: 1px solid black; border-collapse: collapse; margin:0 auto;}
+#movieRating th{background: rgb(224, 224, 224); height: 35px;}
+#movieRating th, td{border: 1px solid black}
+#movieRating td{padding-left: 10px; padding: 5px;}
+#movieRating p{position:relative; left:-15px; top:-7px;}
+#img-ratings{width:35px; height:30px; position:relative; left:-7px;}
+#div-location{margin: 0 auto; width:70%; height:610px;}
+/* #location{width:1000px; height:500px;} */
+#map{position: relative; z-index:-100; float:left; width:400px;}
+#daumRoughmapContainer1576223876110{margin-left: 50px;}
+#mapInfo{float:right; width:400px; position: relative; top:-360px;}
+#subwayInfo{width:400px; height:220px;}
+#line2{width:40px; height:40px;}
+#lineNew{width:55px; height:40px;}
+#bus{width:80px; height:80px; float:left;}
+#subway{width:70px; height:80px;}
+#busTitle, #subwayTitle{text-align: center; font-weight:bold;}
+#maptable td{border: white; padding-left:10px;}
+#maptable td:not(#first), td:not(#subwayInfo){height:40px;}
+#div-price{margin:0 auto; width:70%; height: 300px;}
+#price{border: 1px solid black; border-collapse: collapse; padding-bottom: 10000px;  width:1000px; margin:0 auto; position: relative; top:-100px;}
+#price th{background:rgb(224, 224, 224);}
+#price th, #price td{border: 1px solid black; text-align: center; width: 400px; height: 40px;}

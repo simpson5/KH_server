@@ -1,0 +1,406 @@
+@charset "UTF-8";
+/* 영화 메뉴라인 */
+*{margin: 0 !important; padding: 0;}
+/*하은 수정 0102일 21시부터*/
+#allContent {
+/* border: 1px solid black;  */
+/* max-width: 1440px;  */
+height: 1500px;
+min-height:1300px;
+width:1400px;
+left:10px;
+/* margin:0px auto; */
+
+}
+div#movieView{margin-top: 40px;}
+div#menuLine{border-bottom: 3.3px solid #35256B; height: 40px;}
+/*하은 수정 0102일 21시부터*/
+ul#movieMenu{
+text-align: center; 
+/*빨간줄삭제*/
+/* border: 1px solid red; */ 
+position: relative; 
+top: 10px;}
+ul#movieMenu li{list-style: none; display: inline-block; padding: 0 100px;}
+ul#movieMenu li a{float: left;
+text-decoration: none; 
+color: rgb(87, 85, 85); 
+font-weight: bold;}
+ul#movieMenu a:hover{color: #35256B;}
+ul#movieMenu #m1{color: #35256B;}
+/* 영화 메뉴라인 끝 */
+img.poster{
+	width: 300px; 
+	position: absolute; 
+	left: 130px; 
+	top: 90px;}
+/* 영화 정보 */
+div#viewContent{position: absolute; left: 450px; top: 100px;}
+/*하은 수정 0102일 21시부터*/
+div#viewContent2 {
+position: absolute; 
+left: 100px; 
+top: 600px;
+}
+.title img{width: 50px; margin-left: -10px;}
+/*하은 수정 0102일 21시부터*/
+.title span{
+    font-size: 25px; 
+    font-weight: bold; 
+    position: absolute; 
+    top: 18px;}
+    
+    
+div#viewContent hr{width: 790px; margin-top: 13px; margin-bottom: 13px;}
+/*하은 수정 0102일 21시부터*/
+span.rating{
+/* padding-top:10px; */
+margin-left: 15px; 
+font-size: 15px; 
+font-weight: bold; 
+color: black
+}
+/*하은 추가수정 0102일 21시부터*/
+div.title{
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+.ratingTicketing{font-weight: bold; font-size: 20px; color: rgb(107, 107, 107);}
+.grade{font-size: 30px;}
+.star{color: rgb(142, 68, 173); font-size: 20px; font-weight: bold;}
+#bar{font-size: 25px; color: darkgray; position: relative; top: -5px;}
+/*하은 수정 0102일 21시부터*/
+
+hr{
+	top:5px;
+}
+#bar{
+	top:-1px;
+}
+#ratingLine{
+	margin-bottom:20px;
+    padding-top:15px;
+    padding-bottom:5px;    
+    padding-left:15px;
+    /* margin-bottom: 30px; */
+    }
+    
+    #ratingLine span{
+    font-size: 15px;
+    }
+    
+    #ratingLine strong{
+    font-size: 15px;
+    }
+/* 테이블 */
+table#movieInformation
+{margin-left: 15px;
+}
+/*하은 수정 0102일 21시부터*/
+td.t_title{
+font-size: 15px; 
+font-weight: bold; 
+margin:auto;
+width:100px;
+top:5px;
+padding-top:10px;
+padding-left:0px;
+padding-right:10px;
+padding-bottom: 10px;
+}
+/*하은 수정 0102일 21시부터*/ 
+td.t_content{
+    color: rgb(85, 84, 84); 
+    font-size: 15px; 
+    font-weight:bold;
+    padding-bottom: 5px;
+    width: 670px;
+    top:9px;
+    }
+/*하은 추가수정 0102일 21시부터*/
+div#buttonArea{
+    padding-left: 17px;
+    padding-top:40px;
+
+}
+/*하은 수정 0102일 21시부터*/
+button#like, button#ticketing{
+    cursor: pointer; 
+    width: 120px; 
+    height: 50px; 
+    color: white; 
+    font-weight: bold; 
+    font-size: 15px;
+    margin-top: 20px; 
+    margin-left: 20px; 
+    border: 0px; 
+    border-radius: 4px 4px;
+}
+button#like{background-color: rgb(192, 57, 43);}
+button#ticketing{background-color: #35256B;}
+/*하은 수정 0102일 21시부터*/
+/* 줄거리 라인 */
+div#viewLine{
+background:#35256B; 
+width: 1160px; 
+height: 65px; 
+padding-left:100px;
+margin-left: 130px; 
+/* margin-top: 70px; */
+top:20px;
+border-radius: 10px 10px; 
+text-align: center; 
+line-height: 65px;
+}
+/*하은 수정 0102일 21시부터*/
+#viewLine a{
+text-decoration: none; 
+color: gray; 
+font-size: 17px; 
+padding-left: 100px;
+padding-right: 100px; 
+font-weight: bold;
+width: 100px !important;
+font-family: 'Nanum Gothic Coding', monospace;
+   
+}
+#viewLine a#a1{color: white;}
+div.box{width: 1200px; margin-left: 150px; margin-top: 50px;}
+
+
+/*하은 수정 0102일 21시부터*/
+#box1 p{
+top:70px;
+left:30px;
+font-size: 15px;
+text-align:justify;
+font-family: 'Nanum Gothic Coding', monospace;
+   
+
+}
+/*하은 수정 0102일 21시부터*/
+span.view_title{
+display: inline-block; 
+font-size: 20px; 
+font-weight: bold; 
+top:40px;
+left: 10px;
+/* margin-bottom: 20px; 
+margin-right: 10px; */
+}
+.form-check form-check-inline{
+    width:10px;
+    height: 10px;
+}
+div#commentBox{margin-left: 10px; border: 2px solid lightgray; border-radius: 5px 5px; 
+               width: 900px; height: 150px;}
+/* .box:not(#box1){display: inline-block;} */
+
+/* 0103 10시부터 수정  */
+.comment-editor{
+	top:50px;
+	
+}
+textarea{
+	width:900px;
+	height:80px;
+/* 	margin-left: 100px; 
+	margin-right: 5px;  */
+	/* padding-top: 10px; 
+	padding-bottom: 10px; */
+	top:10px;
+	font-size: 15px; 
+	border: 2px solid lightgray; 
+	border-radius: 5px 5px;
+	}
+	
+	
+/* 0103 10시부터 수정  */	
+#btn-insert{
+width: 90px;
+height: 75px; 
+position: relative; 
+left:10px;
+top:10px;
+border: 0; 
+border-radius: 5px 5px;
+font-size: 15px; 
+font-weight: bold; 
+cursor: pointer;
+
+
+margin-top:20px;
+    border: 1px solid #35256b; 
+    background-color: #261049; 
+    color: white; 
+    padding: 5px; 
+    margin-left:-1px;
+
+}
+
+span.cnt
+{
+left: 15px;
+bottom:-39px;
+color: tomato; 
+font-weight: bold; 
+font-size: 17.5px;
+}
+/*heart*/
+/*하은 수정 0102일 21시부터*/
+.heart{
+    width: 45px;
+    height: 45px;
+    position: relative;
+    top: 465px;
+    left: 370px;    
+}
+    
+.notHeart{
+    visibility: hidden;
+}    
+
+/*0103 10시부터 추가 */
+#box3{
+	top:50px;
+	margin-top:100px;
+	width:1250px;
+	height: 450px;
+	background-color: #000000ed;
+}
+.view_title{
+	
+	color:gray;
+	text-indent: 20px;
+
+/* 	border-bottom: 2px solid white;
+	width: 320px; 
+margin-top:-40px;
+margin-bottom: 15px; */
+}
+#box3 p{
+padding-top: 50px;
+padding-left: 350px;
+
+}
+
+form{
+	margin-bottom: 100px;
+}
+
+/*댓글  */
+.comment-container{
+left:80px;	
+}
+/*댓글 작성*/
+/* div.comment-container #btn-insert{
+	width:60px; height:50px; color:white; background:#3300ff; position:relative; top:-20px;} */
+
+/*댓글테이블*/
+table#tbl-comment{
+left:80px;
+	width:1020px; 
+margin:0 auto; 
+border-collapse:collapse; 
+clear:both; 
+top:80px;
+} 
+
+table#tbl-comment tr td{
+border-bottom:1px solid #35256b; 
+border-top:1px solid #35256b; 
+
+text-align:left; 
+line-height:150%;
+
+
+}
+
+textarea[name="commentContent"]{
+	bottom: -10px;
+	
+}
+table#tbl-comment tr td:first-of-type {
+	padding: 3px 20px 20px 20px;
+	}
+table#tbl-comment tr td:last-of-type {
+	text-align:right; 
+	width: 200px;
+	}
+table#tbl-comment button.btn-reply{
+display:none;
+}
+table#tbl-comment tr:hover {
+/* background:#a9a1c1; */
+}
+table#tbl-comment tr:hover button.btn-reply{
+	display:inline;
+	}
+table#tbl-comment sub.comment-writer {
+	color:black; 
+	font-size:15px}
+table#tbl-comment sub.comment-date {
+	color:tomato; 
+	font-size:11px}
+table#tbl-comment tr.level2 {
+	color:gray; 
+	font-size: 15px;}
+table#tbl-comment tr.level2 td:first-of-type{
+padding-left:80px;
+
+}
+table#tbl-comment tr.level2 sub.comment-writer {
+color:#8e8eff; 
+font-size:15px}
+table#tbl-comment tr.level2 sub.comment-date {
+color:#ff9c8a;
+font-size:11px}
+
+/* 댓글 삭제버튼*/
+.btn-delete{
+	 margin-top:20px;
+    border: 1px solid #35256b; 
+    background-color: #261049; 
+    color: white; 
+    padding: 5px; 
+    margin-left:-1px;
+   
+    font-size:12px;
+
+	
+}
+.btn-reply{
+	
+	 margin-top:20px;
+    border: 1px solid #35256b; 
+    background-color: #261049; 
+    color: white; 
+    padding: 5px; 
+    margin-left:-1px;
+   
+    font-size:12px;
+}
+/*대댓글 등록버튼  */
+.btn-insert2{
+
+	left:50px;
+	top:10px;
+	bottom:10px;
+	
+	margin-top:20px;
+    border: 1px solid #35256b; 
+    background-color: #261049; 
+    color: white; 
+    padding: 5px; 
+    margin-left:-1px;
+   
+    font-size:12px;
+	
+
+
+}
+/* div.ytp-cued-thumbnail-overlay-image{
+width:100%;
+} */
+/* #box3{position:absolute;padding-bottom:56.25%;padding-top:30px;height:0;overflow:hidden;} 
+#box3 iframe,#box3 object,#box3 embed{position:absolute;top:0;left:0;width:100%;height:100%;}  */

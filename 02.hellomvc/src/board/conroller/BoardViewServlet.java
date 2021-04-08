@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import board.model.service.BoardService;
 import board.model.vo.Board;
+import common.MvcUtils;
 
 /**
  * Servlet implementation class BoardViewServlet
@@ -34,6 +35,13 @@ public class BoardViewServlet extends HttpServlet {
 		//2. 업무로직 : board객체 조회(첨부파일 조회)
 		Board board = boardService.selectOne(no);
 		System.out.println("board@servlet = " + board);
+		
+		//xss 공격방지
+		board.setTitle(MvcUtils.escapeHtml(board.getTitle()));
+		board.setContent(MvcUtils.escapeHtml(board.getContent()));
+		
+		// \n개행문자를 <br />태그로 변경
+		board.setContent(MvcUtils.convertLinFeedToBr(board.getContent()));
 		
 		//3. jsp forwarding
 		request.setAttribute("board", board);

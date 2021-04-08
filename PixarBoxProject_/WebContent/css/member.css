@@ -1,0 +1,347 @@
+/* @charset "UTF-8";
+common
+section#content-member {
+    min-height: 500px;
+}
+하은수정 
+h2 {
+    padding-top: 10px;
+    padding-left:70px;
+    font-size:25px;
+}
+div.title {
+    width: 100%;
+    text-align: center;
+}
+하은수정
+hr {
+    width: 90%;
+    display: inline-block;
+    border-top: 1.5px solid #ded8d8;
+}
+div#loginFrm {
+    width: 100%;
+    margin: auto;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+하은 수정
+form#loginForm input {
+    height: 30px;
+    width: 250px;
+    border-radius: 5px;
+}
+하은수정
+form#loginForm input.button {
+    margin-left:5px;
+    margin-top: -10px;
+    width: 70px;
+    height: 90px;
+    border-radius: 3px;
+    
+    border: 1px solid #35256b; 
+    background-color: #261049; 
+    color: white; 
+    padding: 5px; 
+    font-size:12px;
+}
+하은수정
+form#loginForm input.button:hover{ 
+    color:#261049; 
+    background-color: 
+    white; }
+하은수정 
+input[type=checkbox] {  
+    display: none;  
+}
+input[type=checkbox] + label{
+    display: inline-block;  
+    cursor: pointer;  
+    position: relative;  
+    padding-left: 25px;  
+    margin-right: 15px;  
+    font-size: 13px;
+}
+input[type=checkbox]+ label:before {     
+    content: "";  
+    display: inline-block;  
+    width: 20px;  
+    height: 20px;  
+    margin-right: 10px;  
+    position: absolute;  
+    left: 0;  
+    bottom: 1px;  
+    background-color: #ccc;  
+    border-radius: 2px; 
+    box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);  
+}
+input[type=checkbox]:checked + label:before { 
+    content: "\2713";  체크모양
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);  
+    font-size: 18px; 
+    font-weight:800; 
+    color: #fff;  
+    background:#2f87c1;
+    text-align: center;  
+    line-height: 18px;  
+} 
+@media ( max-width: 800px ) {
+    div#loginFrm {
+        width: auto;
+    }
+}
+memberEnroll 회원가입부분
+div#enrollFrm {
+    width: 1400px;
+    margin: 0 auto;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form#enrollForm {
+    width: 500px;
+    margin: 0 auto;
+    align-content: center;
+}
+form#enrollForm p {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+form#enrollForm input, select {
+    height: 28px;
+    border-radius: 4px;
+    margin: 0 auto;
+}
+ */
+ @charset "UTF-8";
+/* common */
+/*하은 수정0102일22시부터*/
+/*풋터와 너무 붙어있는 느낌이라 길이를 늘렸습니다.  */
+section#content-member {
+    min-height: 1200px;
+}
+/*하은수정  */
+h2 {
+    padding-top: 10px;
+    padding-left:70px;
+    font-size:25px;
+}
+div.title {
+    width: 100%;
+    text-align: center;
+}
+/*하은수정*/
+hr {
+    width: 90%;
+    display: inline-block;
+    border-top: 1.5px solid #ded8d8;
+}
+div#loginFrm {
+    width: 100%;
+    margin: auto;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*하은 수정 */
+form#loginForm input {
+    height: 30px;
+    width: 250px;
+    border-radius: 5px;
+}
+/*하은수정*/
+form#loginForm input.button {
+    margin-left:5px;
+    margin-top: -10px;
+    width: 70px;
+    height: 90px;
+    border-radius: 3px;
+    
+    border: 1px solid #35256b; 
+    background-color: #261049; 
+    color: white; 
+    padding: 5px; 
+    font-size:12px;
+}
+/*하은수정*/
+form#loginForm input.button:hover{ 
+    color:#261049; 
+    background-color: 
+    white; }
+/*하은수정  */
+input[type=checkbox] {  
+    display: none;  
+}
+/*하은수정  */
+input[type=checkbox] + label{
+    display: inline-block;  
+    cursor: pointer;  
+    position: relative;  
+    padding-left: 25px;  
+    margin-right: 15px;  
+    font-size: 13px;
+}
+/*하은수정  */
+input[type=checkbox]+ label:before {     
+    content: "";  
+    display: inline-block;  
+    width: 20px;  
+    height: 20px;  
+    margin-right: 10px;  
+    position: absolute;  
+    left: 0;  
+    bottom: 1px;  
+    background-color: #ccc;  
+    border-radius: 2px; 
+    box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);  
+}
+/*하은수정  */
+input[type=checkbox]:checked + label:before { 
+    content: "\2713";  /* 체크모양 */
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);  
+    font-size: 18px; 
+    font-weight:800; 
+    color: #fff;  
+    background:#2f87c1;
+    text-align: center;  
+    line-height: 18px;  
+}
+/* /*하은 수정0102일22시부터*/
+div.form-check form-check-inline {
+    margin-left: 10px; padding-left : 10px;
+    left: 10px;
+    padding-left: 10px;
+}
+*
+/
+@media ( max-width: 800px ) {
+    div#loginFrm {
+        width: auto;
+    }
+}
+/*하은 수정0102일22시부터*/
+/* memberEnroll 회원가입부분 */
+div#enrollFrm {
+    width: 100%;
+    margin: auto;
+    padding-top:100px;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*하은 수정0102일18시부터*/
+form#enrollForm p {
+    padding-top: 10px;
+    padding-bottom: 5px;
+    font-family: 'Nanum Gothic Coding', monospace;
+}
+/*하은 수정0102일22시부터*/
+form#enrollForm input, select {
+    height: 30px;
+    border-radius: 4px;
+    font-family: 'Nanum Gothic Coding', monospace;
+}
+/*하은 수정0102일 22시부터*/
+form [type=text]#lastName{
+    width: 110px;
+}
+/*하은 수정0102일22시부터*/
+form [type=text]#firstName{
+    width: 175px;
+}
+/*하은 수정0102일22시부터*/
+form [type=text]#memberId{
+    width: 313px;
+}
+/*하은 수정0102일22시부터*/
+form [type=password]#password{
+    width: 313px;
+}
+/*하은 수정0102일22시부터*/
+form [type=password]#pwdChk{
+    width: 313px;
+}
+/*하은 수정0102일22시부터*/
+form [type=text]#email{
+    width: 150px;
+}
+/*하은 수정0102일22시부터*/
+select#emailAdd {
+    margin-top:-10px;
+    width: 140px;
+    height: 38px;
+}
+/*하은 수정0102일18시부터*/
+form [type=tel]#phone1{
+    width: 80px;
+    text-align: center;
+}
+/*하은 수정0102일22시부터*/
+form [type=tel]#phone2{
+    width: 90px;
+    text-align: center;
+}
+/*하은 수정0102일22시부터*/
+form [type=tel]#phone3{
+    width: 90px;
+    text-align: center;
+}
+/*하은 수정0102일22시부터*/
+/*회원가입  */
+form#enrollForm [type=submit] {
+    margin-top:20px;
+    border: 1px solid #35256b; 
+    background-color: #261049; 
+    color: white; 
+    padding: 5px; 
+    margin-left:-1px;
+    width:330px;
+    height:50px;
+    font-size:12px;
+}
+/*하은 수정0102일18시부터*/
+form#enrollForm [type=submit]:hover{ 
+    color:#white; 
+    background-color: 
+    black; }
+    
+/*하은 수정0102일18시부터*/
+form#enrollForm [type=button] {
+    margin-top:-10px;
+    border: 1px solid #35256b; 
+    background-color: #261049; 
+    color: white; 
+    padding: 5px; 
+    font-size:12px;
+    width:70px;
+    height:30px;
+}
+/*하은 수정0102일18시부터*/
+div#enrollFrm input,select{
+    border: 0.5px solid #35256b; 
+}
+/*하은 수정0102일22시부터*/
+#p_border{
+border-bottom:1px solid #35256b;
+width: 320px; 
+margin-top:-40px;
+margin-bottom: 15px;
+}
+/*하은 수정0102일22시부터*/
+#p_border_left{
+    border-left: 5px solid #35256b;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-indent:10px
+}
+/*하은 추가0102일22시부터*/
+#p_border_gender{
+border-left: 5px solid #35256b;
+    text-indent:10px;
+
+}

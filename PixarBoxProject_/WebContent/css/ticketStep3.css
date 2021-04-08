@@ -1,0 +1,32 @@
+@charset "UTF-8";
+#all{width: 700px; height: 300px; margin: 0 auto;}
+#payment-box{float: left; height: 300px; width: 550;}
+#movie-box{float: right; width:150px; height: 300px;}
+#bar{background:rgb(224, 224, 224); width:8px; height:40px; display:inline-block;}
+h2{display: inline;}
+#title{padding-left: 10px;}
+#point, #pointDiv, #paymentWay, #paymentDiv{margin-left: 20px;}
+#point, #paymentWay{background: lightgray; width:400px; height: 40px; line-height: 40px; font-weight: bold; display: inline-block;}
+#pointDiv, #paymentDiv{display: none;}
+.paymentWayDiv:not(#cardDiv){display: none;}
+#pointDown, #paymentDown{width:50px; height:50px; float: right;}
+#pointUp, #paymentUp{width:35px; height:40px; float:right; display: none; padding-right: 8px;}
+#movieInfo{display: inline-block;}
+#movieImg{height: 170px; width: 130px;}
+p{display: inline;}
+hr{width: 80%;}
+#priceInfo{margin: 0 auto;}
+td{font-size: 10px; vertical-align: bottom;}
+#btn-previous{background: rgb(224, 224, 224); margin-right: 50px;}
+#btn-previous p{position: relative; top: -20px;}
+#img-previous{width: 50px; height: 50px;}
+.personnel{font-size: 15px; padding-left: 10px;}
+#selectedSeat{background:rgb(38, 16, 73); display:inline-block; color:white;}
+#salePrice{font-size: 13px; color: gray; float: right;}
+#totalPrice{font-size: 17px; padding-left: 10px;}
+/* table{border: 1px solid black;}
+table td{border: 1px solid black;} */
+#paymentButton{background: rgb(38, 16, 73); border: 0px; color: white; width: 110px; height: 50px;}
+#blank{width: 30px;}
+#form{display:none; background:lightgray; position:relative; top:-300px; width:60%;}
+#titleDiv{background:rgb(38, 16, 73); color: white;}

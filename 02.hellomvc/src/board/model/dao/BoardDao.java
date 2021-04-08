@@ -218,7 +218,7 @@ public class BoardDao {
 				board = new Board(no, title, writer, content, regDate, readCount, null);
 			}
 		} catch(SQLException e) {
-			throw new BoardException("게시물 뷰 오류", e);
+			throw new BoardException("게시물 조회 오류", e);
 		} finally {
 			// 5. 자원반납(생성역순 rset - pstmt)
 			close(pstmt);
@@ -247,7 +247,7 @@ public class BoardDao {
 				attach.setStatus("Y".equals(rset.getString("status")) ? true : false);
 			}
 		} catch(SQLException e) {
-			throw new BoardException("게시물 뷰 오류", e);
+			throw new BoardException("첨부파일 조회 오류", e);
 		} finally {
 			// 5. 자원반납(생성역순 rset - pstmt)
 			close(pstmt);
@@ -306,5 +306,45 @@ public class BoardDao {
 			close(pstmt);
 		}
 		return boardNo;
+	}
+
+	public int boardDelete(Connection conn, int no) {
+		PreparedStatement pstmt = null;
+		int result = 0;
+		String sql = prop.getProperty("boardDelete");
+		try {
+			// 3. PreparedStatement 객체 생성 (미완성 쿼리)
+			// 3.1 ? 값 대임
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, no);
+
+			// 4. 실행 : DML(executeUpdate) -> int, DQL(excuteQuery) -> ResultSet
+			// 4.1 ResultSet -> Java 객체 옮겨담기
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			throw new BoardException("게시판 삭제 오류", e);
+		} finally {
+			// 5. 자원반납(생성역순 rset - pstmt)
+			close(pstmt);
+		}
+		return result;
+	}
+
+	public int updateBoard(Connection conn, Board board) {
+		PreparedStatement pstmt = null;
+		int result = 0;
+		String sql = prop.getProperty("updateBoard");
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, board.getTitle());
+			pstmt.setString(2, board.getContent());
+			pstmt.setInt(3, board.getNo());
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			throw new BoardException("게시판 수정 오류", e);
+		} finally {
+			close(pstmt);
+		}
+		return result;
 	}
 }
