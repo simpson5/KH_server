@@ -10,6 +10,7 @@ import java.util.List;
 
 import board.conroller.BoardEnrollServlet;
 import board.model.dao.BoardDao;
+import board.model.exception.BoardException;
 import board.model.vo.Attachment;
 import board.model.vo.Board;
 import board.model.vo.BoardComment;
@@ -192,4 +193,5 @@ public class BoardService {
 		}
 		return result;
 	}
+	
 }

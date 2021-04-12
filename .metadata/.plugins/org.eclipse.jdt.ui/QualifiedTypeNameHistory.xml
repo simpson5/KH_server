@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.lang.Override"/>
 <fullyQualifiedTypeName name="java.rmi.ServerException"/>
 <fullyQualifiedTypeName name="com.simpson.model.vo.User"/>
 <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
@@ -32,12 +31,10 @@
 <fullyQualifiedTypeName name="java.util.Base64"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="member.model.service.MemberService"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="member.model.vo.Member"/>
 <fullyQualifiedTypeName name="java.lang.NumberFormatException"/>
 <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
-<fullyQualifiedTypeName name="java.sql.Date"/>
 <fullyQualifiedTypeName name="java.util.Properties"/>
 <fullyQualifiedTypeName name="board.conroller.BoardEnrollServlet"/>
 <fullyQualifiedTypeName name="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"/>
@@ -47,7 +44,6 @@
 <fullyQualifiedTypeName name="java.text.DecimalFormat"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="common.MvcFileRenamePolicy"/>
-<fullyQualifiedTypeName name="board.model.vo.Board"/>
 <fullyQualifiedTypeName name="common.MvcUtils"/>
 <fullyQualifiedTypeName name="board.model.vo.Attachment"/>
 <fullyQualifiedTypeName name="java.io.BufferedInputStream"/>
@@ -55,7 +51,13 @@
 <fullyQualifiedTypeName name="java.io.File"/>
 <fullyQualifiedTypeName name="java.io.BufferedOutputStream"/>
 <fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
-<fullyQualifiedTypeName name="board.model.service.BoardService"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="java.sql.Date"/>
+<fullyQualifiedTypeName name="board.model.service.BoardService"/>
 <fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="board.model.vo.BoardComment"/>
+<fullyQualifiedTypeName name="board.model.vo.BoardCommentCnt"/>
+<fullyQualifiedTypeName name="board.model.vo.Board"/>
+<fullyQualifiedTypeName name="board.model.exception.BoardException"/>
 </qualifiedTypeNameHistroy>
