@@ -1,0 +1,229 @@
+article {
+	position: relative;
+	top: 50px;
+	width: 1024px;
+	height: auto;
+	background-color: #fff;
+	padding: 25px;
+	/* border: 1px solid re */
+	margin: 0 auto;
+}
+
+div.choice_movie_info {
+	border: 2px solid gray;
+	padding: 15px;
+	font-style: normal;
+	font-size: 12px;
+	font-family: "돋움", Dotum, "굴림", Gulim, Helvetica,
+		AppleSDGothicNeo-Medium, AppleGothic, Sans-serif;
+	height: 320px;
+}
+
+.choice_movie_info a {
+	text-decoration: none;
+}
+
+.movie_info_box {
+	position: relative;
+	top: -35px;
+	height: 300px;
+}
+
+.movie_img {
+	width: 200px;
+	display: inline-block;
+}
+
+.movie_title {
+	display: inline-block;
+	position: relative;
+	top: -270px;
+	left: 10px;
+	font-size: 2em;
+	color: #000;
+}
+
+.review_write_btn {
+	position: relative;
+	top: 20px;
+	left: 870px;
+	background-color: rgb(254, 213, 23);
+	border: 1px solid rgb(187, 153, 1);
+}
+
+.ticketing_btn {
+	position: relative;
+	top: 0px;
+	left: 870px;
+	background-color: rgb(254, 213, 23);
+	border: 1px solid rgb(187, 153, 1);
+}
+
+.movie_info_tb {
+	/* border: 1px solid blue; */
+	position: relative;
+	left: 210px;
+	top: -250px;
+}
+
+.movie_info_tb th {
+	font-weight: bold;
+	color: rgb(87, 87, 87);
+	padding: 3px;
+	width: 80px;
+	text-align: left;
+	font-size: 12px;
+}
+
+table.movie_info_tb td {
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+		'Lucida Sans', Arial, sans-serif;
+	font-size: 11px;
+	color: rgb(92, 91, 91);
+	height: 12px;
+}
+
+.movie_info_tb a {
+	color: rgb(92, 91, 91);
+}
+
+.movie_info_tb a:hover {
+	text-decoration: underline;
+}
+
+.tb_hr {
+	border-bottom: 1px solid rgb(206, 206, 206);
+	height: 15px;
+}
+
+.total_review_cnt_box {
+	float: right;
+	position : relative;
+	top: -5px;
+	font-size: 13px;
+}
+
+.total_review_cnt {
+	color: gray;
+}
+
+.review_list {
+	list-style: none;
+	background-color: rgba(254, 212, 23, 0.342);
+	height: 40px;
+	padding: 0;
+	border-bottom: 1px solid rgb(66, 66, 66);
+}
+
+.review_list a {
+	text-decoration: none;
+	color: rgb(80, 80, 80);
+}
+
+.review_list li {
+	line-height: 40px;
+	border-right: 1px solid whitesmoke;
+	float: left;
+	width: 150px;
+	text-align: center;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-size: 14px;
+	color: rgb(80, 80, 80);
+	background-color: rgba(255, 220, 63, 0.664);
+}
+
+.review_list li:first-of-type {
+	background-color: rgb(254, 213, 23);
+}
+
+.review_list li:first-of-type a {
+	color: rgb(0, 0, 0);
+}
+
+.review_tb {
+	padding: 0;
+	border-top: 1px solid rgb(44, 44, 44);
+	border-bottom: 1px solid rgb(44, 44, 44);
+	width: 100%;
+	position: relative;
+	top: -17px;
+	border-collapse: collapse;
+	text-align: center;
+}
+
+table.review_tb th, td {
+	/* border-bottom: 1px solid gray; */
+	padding: 0;
+	margin: 0;
+}
+
+.review_tb td a {
+	text-decoration: none;
+	color: rgb(61, 61, 61);
+}
+
+.review_tb th {
+	height: 35px;
+	color: rgb(53, 52, 52);
+	border-bottom: 1px solid rgb(202, 202, 202);
+}
+
+.review_tb td {
+	border-bottom: 1px solid rgb(235, 235, 235);
+}
+
+.review_tb th a {
+	color: rgb(80, 80, 80);
+}
+
+td.title {
+	text-align: left;
+	font-size: 14px;
+}
+
+.paging {
+	margin: 0 auto;
+	text-align: center;
+	height: 100px;
+}
+
+.paging a {
+	text-decoration: none;
+	color: black;
+}
+
+.review_header {
+	margin-top:50px;
+	position: relative;
+	top : 30px;
+}
+.movie_sub_title{
+	position: relative;
+	top : -25px;
+	font-size: 14px;
+	font-weight: bold;
+}
+.review_search {
+	display: inline-block;
+	position : relative;
+	top : -25px;
+	left : 250px;
+}
+
+.review_search_sumit {
+	height: 25px;
+	position: relative;
+	top: 1px;
+	background-color: rgb(254, 213, 23);
+	border: 1px solid rgb(182, 182, 182);
+}
+.search-type{
+	position:relative;
+	left : 250px;
+	top : -25px;
+}
+
+.review_search_text {
+	height: 25px;
+	
+}

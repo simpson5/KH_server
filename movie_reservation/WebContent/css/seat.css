@@ -1,0 +1,88 @@
+.content {
+
+}
+
+.headcount-box {
+  position: relative;
+  text-align: center;
+}
+
+.headcount-box h2 {
+  background-color: black;
+  color: white;
+}
+
+.cnt-container {
+  padding: 0 10px;
+}
+
+.movie-info {
+
+}
+
+.text-info {
+
+}
+
+.adult {
+
+}
+
+.child {
+
+}
+
+.cnt-container .btn-box {
+  display: inline-block;
+  border: solid 1px black;
+  width: 6vw;
+  height: 3vh;
+  text-align: center;
+  border-radius: 0.3vw;
+  padding-top: 0.3vh;
+}
+
+.btn-box span {
+  margin: 0 1vw;
+}
+
+.btn-box button {
+  border: 0;
+  outline: 0;
+  background-color: white;
+}
+
+.headcount-box img {
+  width: 4vw;
+}
+
+.seat-container {
+  position: relative;
+  width: 60vw;
+  height: 60vh;
+  background-color: black;
+}
+
+.screen {
+  position: absolute;
+  width: 49vw;
+  height: 3vh;
+  background-color: gray;
+  left: 50%;
+  top: 5vh;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 1vw;
+  color: white;
+}
+
+.seat {
+  position: absolute;
+  width: 40vw;
+  height: 40vh;
+  background-color: white;
+  display: inline-block;
+  left: 50%;
+  top: 10vh;
+  transform: translateX(-50%);
+}

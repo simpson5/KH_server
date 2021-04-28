@@ -1,0 +1,82 @@
+:root {
+  --main-color: yellow;
+  --bg--color: gray;
+  --font-color: black;
+}
+
+body {
+  margin: 0px;
+}
+
+.total_content {
+  background-color: gray;
+  min-height:100vh;
+}
+
+.main_container {
+  width: 50vw;
+  background-color: white;
+  margin: 10px auto;
+  padding: 20px 0;
+}
+
+h1 {
+  text-align: center;
+  margin: 0;
+  padding: 5vh 0;
+  color: var(--main-color);
+}
+
+.search_container {
+  text-align: center;
+  padding-top: 5px;
+}
+
+.search_container input {
+  background-color: var(--bg--color);
+  height: 34px;
+  padding: 2px;
+  color: white;
+  font-size: 15px;
+  margin-right: 15px;
+}
+
+.search_container input::placeholder {
+  color: white;
+  font-size: 15px;
+}
+
+.search_container .movie_search_btn {
+  width: 60px;
+  height: 42px;
+  border: 1px solid black;
+  color: black;
+  background-color: var(--main-color);
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+.poster,
+.info {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.title a {
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+.info p {
+  margin: 0;
+}
+
+.page_bar {
+  text-align: center;
+  color: var(--main-color);
+  font-size: 25px;
+}

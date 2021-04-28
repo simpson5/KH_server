@@ -1,0 +1,477 @@
+@charset "utf-8";
+
+/* ===========================================
+   Grouping Class 
+============================================ */
+
+/* ===========================================
+   Contents Area 
+============================================ */
+
+/* ===========================================
+   Main Css
+============================================ */
+.sect-event {
+  min-height: 200px;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 3px solid #241d1e;
+}
+.sect-event ul {
+  margin-top: 16px;
+  clear: both;
+}
+.sect-event li {
+  float: left;
+  margin-left: 6.6px;
+}
+.sect-event li:first-child {
+  margin-left: 0;
+}
+.sect-event iframe {
+  width: 980px;
+  height: 200px;
+}
+
+.cols-banner {
+  overflow: hidden;
+}
+.cols-banner .col-ad,
+.cols-banner .col-hd,
+.cols-banner .col-collage {
+  float: left;
+}
+.cols-banner .box-com {
+  width: 228px;
+  height: 261px;
+  padding: 3px;
+  border: 3px solid #241d1e;
+}
+.cols-banner .box-com .box-inner {
+  width: 226px;
+  height: 259px;
+  border: 1px solid #241d1e;
+  text-align: center;
+}
+.cols-banner .box-com .box-inner iframe,
+.cols-banner .box-com .box-inner a {
+  display: block;
+  width: 226px;
+  height: 259px;
+}
+.cols-banner .col-hd {
+  position: relative;
+  width: 486px;
+  height: 273px;
+  margin: 0 7px;
+}
+.cols-banner .col-hd .tit-hd {
+  position: absolute;
+  width: 486px;
+  height: 92px;
+  padding-top: 12px;
+  background: url(../images/common/bg/bg_hdtrailor_bar.png) no-repeat 0 0;
+  text-align: center;
+}
+.cols-banner .col-hd button[type="button"] {
+  overflow: hidden;
+  position: absolute;
+  width: 66px;
+  height: 66px;
+  top: 50%;
+  left: 50%;
+  margin: -33px 0 0 -33px;
+  background: url(../images/sprite/sprite_icon.png) no-repeat -121px -21px;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
+/*My CGV - 취소내역 예매 환불규정 툴팁 추가*/
+
+/*My CGV - 취소내역 예매 환불규정 툴팁 추가*/
+.sect-mycgv-cancle .tbl-data tbody td.mv_payment {
+  width: 24%;
+  padding-right: 50px;
+  overflow: visible;
+}
+.sect-mycgv-cancle td.mv_cancel_date {
+  width: 15%;
+}
+.cancel_tooltip span {
+  display: block;
+}
+.cancel_tooltip {
+  position: relative;
+  padding-right: 26px;
+}
+.i_cancel_wrap {
+  display: none;
+}
+a.ico_cancel_i {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -8px;
+}
+.cancel_tooltip .tooltip_con {
+  text-indent: -9999px;
+}
+.cancel_tooltip.cardandphone .i_cancel_wrap,
+.cancel_tooltip.card .i_cancel_wrap,
+.cancel_tooltip.phone .i_cancel_wrap,
+.cancel_tooltip.banking .i_cancel_wrap {
+  display: block;
+}
+
+/*하단 카드와 휴대폰 결제 동시 진행시 팝업은 이미지받으면 수정예정*/
+.cancel_tooltip.cardandphone a.ico_cancel_i:hover .tooltip_con {
+  display: block;
+  width: 293px;
+  height: 217px;
+  background: url(http://img.cgv.co.kr/R2014/images/common/mycgv_tooltip/cancel_tooltip_cardandphone.png)
+    no-repeat 0 0;
+  left: -27px;
+  top: -217px;
+}
+
+.cancel_tooltip.card a.ico_cancel_i:hover .tooltip_con {
+  display: block;
+  width: 293px;
+  height: 160px;
+  background: url(http://img.cgv.co.kr/R2014/images/common/mycgv_tooltip/cancel_tooltip_card.png)
+    no-repeat 0 0;
+  left: -27px;
+  top: -157px;
+}
+.cancel_tooltip.phone a.ico_cancel_i:hover .tooltip_con {
+  display: block;
+  width: 293px;
+  height: 143px;
+  background: url(http://img.cgv.co.kr/R2014/images/common/mycgv_tooltip/cancel_tooltip_phone.png)
+    no-repeat 0 0;
+  left: -27px;
+  top: -143px;
+}
+.cancel_tooltip.banking a.ico_cancel_i:hover .tooltip_con {
+  display: block;
+  width: 293px;
+  height: 281px;
+  background: url(http://img.cgv.co.kr/R2014/images/common/mycgv_tooltip/cancel_tooltip_banking.png)
+    no-repeat 0 0;
+  left: -27px;
+  top: -281px;
+}
+/*로그인 세션 만료*/
+.sect-logout .btn_area_logout {
+  margin-top: 35px;
+}
+.sect-logout .btn_area_logout p a span {
+  padding: 0 24px;
+}
+.sect-logout .btn_area_logout p a.btn_red {
+  margin-left: 5px;
+}
+/*로그인 세션만료 팝업 */
+.layer-wrap.pop_corp_session.off,
+.layer-wrap.pop_corp_session {
+  display: none;
+}
+.layer-wrap.pop_corp_session.on {
+  display: block;
+}
+.layer-wrap.pop_corp_session.on {
+  position: fixed;
+}
+.pop_corp_session .pop_wrap {
+  position: relative;
+  padding: 5px;
+  background-color: #333;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: left;
+}
+.layer-wrap.pop_corp_session h1 {
+  height: 50px;
+  line-height: 50px;
+  padding-left: 19px;
+  border: 1px solid #707070;
+  color: #f2f0e5;
+  font-weight: 300;
+  font-size: 22px;
+}
+.layer-wrap.pop_corp_session .pop-contents {
+  margin-top: 5px;
+  padding: 70px 40px 30px;
+  background-color: #f6f6f4;
+  color: #333;
+}
+.col_red {
+  color: #e71a0f;
+}
+.layer-wrap.pop_corp_session .ss_con_wrap {
+  background: url(http://img.cgv.co.kr/image_gt/company/ico_warning_session.png)
+    no-repeat 33px 0;
+  width: 274px;
+  padding: 10px 0 60px 153px;
+}
+.layer-wrap.pop_corp_session .ss_con_wrap p {
+  font-size: 14px;
+}
+.layer-wrap.pop_corp_session .ss_con_wrap h5 {
+  margin-bottom: 9px;
+  font-size: 16px;
+}
+.layer-wrap.pop_corp_session .ss_btn_wrap {
+  text-align: center;
+  font-size: 13px;
+}
+.layer-wrap.pop_corp_session .ss_btn_wrap a.round.inblack {
+  margin-right: 2px;
+}
+.btn-close,
+.layer-wrap .popwrap button[type="button"].btn-close {
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: auto;
+  right: 20px;
+  width: 18px;
+  height: 18px;
+  background: url(../images/sprite/sprite_btn.png) no-repeat -72px -62px;
+  border: none;
+  font-size: 0;
+  line-height: 0;
+  zoom: 1;
+}
+.layer-wrap.pop_corp_session {
+  width: 518px;
+  height: 340px;
+  margin-left: -259px;
+  margin-top: -170px;
+}
+/* 포토티켓 개인정보 취급방침 */
+.layer-wrap.photi_agree {
+  position: fixed;
+  width: 650px;
+  margin-left: -325px;
+  margin-top: -144px;
+}
+
+/* 클럽 가입신청팝업 및 탈퇴하기팝업 */
+.layer-wrap.clubtype {
+  display: none;
+}
+.layer-wrap.clubtype .pop-contents {
+  padding-top: 30px;
+  text-align: center;
+  font-weight: 500;
+}
+.layer-wrap .pop-hd-msg {
+  padding-bottom: 25px;
+  margin-bottom: 30px;
+  border-bottom: 1px dashed #ccc9c7;
+}
+.layer-wrap .pop-hd-msg p {
+  font-size: 16px;
+  letter-spacing: -0.5px;
+}
+.layer-wrap .pop-hd-msg p .em-txt {
+  display: block;
+  font-size: 22px;
+  margin-top: 4px;
+}
+
+.layer-wrap .pop-bd-msg p {
+  font-size: 15px;
+  letter-spacing: -0.5px;
+}
+
+.layer-wrap.clubtype .inpbox {
+  margin-top: 20px;
+}
+.layer-wrap.clubtype .inpbox:first-child {
+  margin-top: 0;
+}
+.layer-wrap.clubtype .inpbox > label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+.layer-wrap.clubtype .inpbox > label {
+  display: block;
+  margin-bottom: 10px;
+}
+.layer-wrap.clubtype .inpbox > input[type="text"],
+.layer-wrap.clubtype .inpbox > input[type="password"] {
+  width: 326px;
+  height: 37px;
+  line-height: 37px;
+  font-size: 20px;
+  font-weight: 500;
+  border: 2px solid #000;
+  background: none;
+}
+
+.layer-wrap .emtxt {
+  color: #0071c4;
+}
+.layer-wrap .pop-confirmbox {
+  margin-top: 30px;
+}
+
+.layer-wrap .btn_join {
+  margin-top: 15px;
+  padding: 2px;
+  width: 100%;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #e91400;
+}
+.layer-wrap .btn_join > span {
+  display: block;
+  height: 36px;
+  line-height: 36px;
+  border: 1px solid #f27365;
+}
+.layer-wrap.clubtype .btn_join {
+  width: 260px;
+}
+.layer-wrap div.btn_join > input {
+  display: block;
+  width: 100%;
+  color: #fff;
+  font-size: 16px;
+  height: 36px;
+  line-height: 36px;
+  font-weight: 500;
+  border: 1px solid #f27365;
+}
+
+/* S COMMON */
+.com_tabtype {
+  position: relative;
+  padding-top: 75px;
+}
+.com_tabtype .tab_title {
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 2px;
+  text-align: center;
+  border: 1px solid rgb(77, 77, 75);
+}
+.com_tabtype .tab_title span {
+  display: block;
+  height: 37px;
+  font-size: 13px;
+  color: #585856;
+  line-height: 37px;
+  border: 1px solid #d0cfca;
+  pointer-events: none;
+}
+
+.com_tabtype .tab_title.active {
+  padding: 0;
+  border: 3px solid #2c2c2c;
+}
+.com_tabtype .tab_title.active span {
+  border: 1px solid transparent;
+}
+
+.com_tabtype .tab_title.active + .tab_content {
+  display: block;
+}
+.com_tabtype .tab_content {
+  display: none;
+}
+
+.com_tabtype.unit2 .tab_title {
+  width: 479px;
+}
+.com_tabtype.unit2 .tab_title.tit01 {
+}
+.com_tabtype.unit2 .tab_title.tit02 {
+  left: 495px;
+}
+
+/* E COMMON */
+
+/* S 회사소개 */
+.coexist {
+  padding: 60px 0;
+}
+.coexist .cyberInfo_wrap {
+  padding: 45px 50px;
+  border: 1px solid rgba(212, 207, 193, 0.46);
+}
+.coexist .cyberInfo_wrap strong {
+  font-size: 15px;
+  color: #71481d;
+}
+.coexist .cyberInfo_wrap .cyberInfo_list {
+  overflow: hidden;
+}
+.coexist .cyberInfo_wrap .cyberInfo_list dt {
+  float: left;
+  width: 100%;
+  margin-top: 20px;
+  padding-bottom: 3px;
+  font-weight: bold;
+  font-size: 13px;
+  color: #222;
+  line-height: 20px;
+}
+.coexist .cyberInfo_wrap .cyberInfo_list dd {
+  float: left;
+  width: 100%;
+  font-size: 13px;
+  color: #3b3926;
+  line-height: 20px;
+}
+
+.coexist .cyberReport_wrap {
+  overflow: hidden;
+  position: relative;
+  padding: 23px 118px 24px 80px;
+  border: 1px solid rgba(212, 207, 193, 0.46);
+}
+.coexist .cyberReport_wrap .cyberReport_list_wrap {
+  float: left;
+}
+.coexist .cyberReport_wrap .cyberReport_list_wrap .cyberReport_list {
+  margin-top: 20px;
+  font-size: 15px;
+  color: #3b3926;
+  line-height: 40px;
+}
+.coexist .cyberReport_wrap .cyberReport_list_wrap .cyberReport_list li {
+  position: relative;
+  padding-left: 13px;
+}
+.coexist .cyberReport_wrap .cyberReport_list_wrap .cyberReport_list li:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 4px;
+  height: 4px;
+  margin-top: -2px;
+  background-color: #5d5d5d;
+  border-radius: 50%;
+}
+.coexist .cyberReport_wrap .cyberReport_list_wrap .cyberReport_list li address {
+  display: inline-block;
+  font-style: normal;
+}
+.coexist .cyberReport_wrap .cyberReport_list_wrap .cyberReport_comment {
+  font-size: 13px;
+  color: #e71a0f;
+  line-height: 35px;
+  letter-spacing: -0.048em;
+}
+.coexist .cyberReport_wrap .btn_cyberReport {
+  float: right;
+}

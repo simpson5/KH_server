@@ -1,0 +1,180 @@
+body{
+	margin: 0;
+}
+
+.screen-poster-container {
+  height: 400px;
+  width: 100vw;
+  z-index: 0;
+}
+
+.screen-poster {
+  position: absolute;
+  height: 400px;
+  width: 100vw;
+  background-color: black;
+  text-align: center;
+}
+
+.screen-poster img {
+  height: 400px;
+}
+
+#screen-poster0 {
+  left: -200vw;
+}
+#screen-poster1 {
+  left: -100vw;
+}
+
+#screen-poster3 {
+  left: 100vw;
+}
+#screen-poster4 {
+  left: 200vw;
+}
+
+.poster-icon {
+  position: absolute;
+  font-size: 7vw;
+  color: yellow;
+  z-index: 3;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.poster-icon:hover {
+  cursor: pointer;
+}
+
+.fa-angle-left {
+  left: 5vw;
+}
+
+.fa-angle-right {
+  left: 90vw;
+}
+
+/* 영화 정보 및 예매하기 */
+.movie-info-container {
+	width: 100vw;	
+}
+
+.movie-info-box {
+	width: 50vw;
+	margin: 0 auto;
+}
+
+.movie-info-box > table {
+	width: 50vw;
+}
+
+.main-poster {
+  display: inline-block;
+  width: 170px;
+}
+
+.main-poster img {
+  width: 170px;
+  border-radius: 20px;
+}
+
+.main-info {
+  padding-left: 20px;
+  display: inline-block;
+}
+
+.fa-heart {
+  margin-right: 2vw;
+}
+
+.reservation-btn {
+  margin-left: 10px;
+  height: 20px;
+  width: 100px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+/* 영화 줄거리 및 영상 | 선호도 */
+.Synopsis-box > div {
+  display: inline-block;
+}
+
+.Synopsis {
+  width: 300px;
+  margin-right: 50px;
+}
+
+.male-box,
+.female-box {
+  display: inline-block;
+  text-align: center;
+  margin-right: 20px;
+}
+
+.male,
+.female {
+  width: 80px;
+  height: 200px;
+  border: 1px solid black;
+}
+
+.male {
+  background-color: turquoise;
+  overflow-x:hidden;
+}
+
+.female {
+  background-color: tomato;
+  overflow-x:hidden;
+}
+
+.male-rate {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  margin-left: -10px;
+}
+
+.female-rate {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  margin-left: -10px;
+}
+
+/* 트레일러 */
+.trailer {
+  display: inline-block;
+  width: 200px;
+  position: relative;
+}
+
+.fa-play {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  left: 45%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+/* 리뷰 박스 */
+.review-box {
+  position: absolute;
+}
+
+.review-box table {
+  width: 600px;
+}
+
+.review-box table tr {
+  height: 20px;
+}
+
+.review-title,
+.review-writer {
+  width: 100px;
+}

@@ -1,0 +1,82 @@
+/* header */
+.header_common {
+  position: absolute;
+  width: 80vw;
+  z-index: 1;
+  color: white;
+  margin: 0 10vw;
+}
+.title h1 {
+  text-align: center;
+}
+.title-menu {
+  position: absolute;
+  right: 10vw;
+  top: 5vh;
+  font-size: 15px
+}
+.header_common hr {
+  margin: 5px 0;
+}
+
+.main-menu {
+  position: absolute;
+  width: 80vw;
+  text-align: center;
+}
+
+.main-menu ul,
+.main-menu li {
+  list-style-type: none;
+  float: left;
+  margin: 0;
+}
+
+.main-menu a {
+  text-decoration: none;
+  color: white;
+  padding: 0 20px;
+}
+
+.main-menu li:not(:last-of-type)::after {
+  content: "|";
+}
+
+/* scroll menu */
+.scroll_menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  display: none;
+  background-color: white;
+  text-align: center;
+}
+
+.scroll_box {
+  display: inline-block;
+  
+}
+
+.scroll_menu ul {
+	padding: 0px;
+}
+
+.scroll_menu ul,
+.scroll_menu li {
+  list-style-type: none;
+  float: left;
+  margin: 0;
+}
+
+.scroll_menu a {
+  width: 100px;
+  font-size: 14px;
+  text-decoration: none;
+  color: black;
+  padding: 0 20px;
+}
+
+.scroll_menu li:not(:last-of-type)::after {
+  content: "|";
+}

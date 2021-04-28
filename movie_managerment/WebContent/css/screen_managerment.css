@@ -1,0 +1,43 @@
+
+body{
+    padding: 0px;
+    background-color: gray;
+}
+th, td {
+  text-align: center;
+}
+.total_content{
+    background-color:#fff;
+    margin: 0 auto;
+    width: 800px;
+    padding: 10px;
+}
+.search_frm{
+    display: inline-block;
+    margin-left : 280px;
+    margin-bottom: 20px;
+}
+.search_frm_btn, .update_btn{
+    background-color: yellow;
+    border: 1px solid rgb(156, 156, 156);
+}
+
+table{
+    margin-bottom: 30px;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+th{
+    height: 35px;
+    border-bottom: 1px solid rgb(211, 211, 211);
+    padding-bottom: 5px;
+    font-size: 14px;
+}
+td{
+    height: 35px;
+    font-size : 15px;
+}
+
+#status{
+	margin-top:15px;
+}

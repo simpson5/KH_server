@@ -1,0 +1,65 @@
+.main_container {
+	margin-top: 20px
+}
+
+.table_box {
+	margin: 20px auto;
+}
+
+.table_box h3 {
+	text-align: center;
+	background-color : black;
+	color: white;
+	margin-bottom : 0;
+}
+
+.table_box td {
+	width : 350px;	
+}
+
+.info_box {
+	height: 400px;
+	background-color : gray;
+	vertical-align : middle;
+}
+
+.poster > img {
+	width : 240px;	
+	height: 300px;
+}
+
+.payment_box p {
+	margin: 0;
+}
+
+.reservation_button {
+	width : 100px;	
+	height: 50px;
+	background-color : white;
+	text-align: center;
+	border-radius: 10px
+}
+
+.reservation_button p {
+	margin: 0;
+}
+
+.reservation_button:hover {
+	cursor: pointer;
+}
+
+.date_list {
+	text-align: center;
+}
+
+.date_list h4 {
+	margin: 5px;
+}
+
+.date {
+	margin: 0 10px;
+}
+
+.info_box table tr {
+	margin: 20px;
+}

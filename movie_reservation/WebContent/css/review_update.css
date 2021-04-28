@@ -1,0 +1,20 @@
+
+article {
+    position: relative;
+    top: 50px;
+    width: 1024px;
+    height: auto;
+    background-color: #fff;
+    padding: 25px;
+    /* border: 1px solid red; */
+    margin: 0 auto;
+}
+#container {
+    border: 1px solid rgb(180, 180, 180);
+    padding: 15px;
+    margin-bottom: 5px;
+}
+
+.review_write_footer {
+    float: right;
+}

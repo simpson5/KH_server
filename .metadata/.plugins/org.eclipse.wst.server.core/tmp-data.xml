@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <temp-directories>
+  <temp-directory age="0" key="ajax-server" path="tmp4" recycle="false"/>
+  <temp-directory age="0" key="simpson_the_movie_server" path="tmp5" recycle="false"/>
   <temp-directory age="0" key="helloweb-server" path="tmp0" recycle="false"/>
-  <temp-directory age="0" key="Tomcat v9.0 Server at localhost" path="tmp3" recycle="false"/>
-  <temp-directory age="0" key="simpsonweb-server" path="tmp1" recycle="false"/>
+  <temp-directory age="0" key="simp_test" path="tmp1" recycle="false"/>
   <temp-directory age="0" key="hellomvc-server" path="tmp2" recycle="false"/>
 </temp-directories>

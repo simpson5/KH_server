@@ -6,13 +6,16 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="frm"/>
+		<item key="selection" value=""/>
 		<list key="findhistory">
-			<item value="da"/>
-			<item value="password"/>
-			<item value="loca"/>
-			<item value="frm"/>
-			<item value="jsp"/>
+			<item value="공통"/>
+			<item value="jqu"/>
+			<item value="#contents.contents_mypage"/>
+			<item value="ticket_info"/>
+			<item value="ticket_list"/>
+			<item value="pur"/>
+			<item value="sys"/>
+			<item value="title"/>
 		</list>
 		<list key="replacehistory">
 		</list>

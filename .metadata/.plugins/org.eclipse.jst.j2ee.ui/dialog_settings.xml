@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<item key="J2EE_EXPORT_OVERWRITE" value="true"/>
+	<item key="J2EE_EXPORT_SOURCE" value="true"/>
 	<list key="MRU_RUNTIME_STORE">
 		<item value="Apache Tomcat v9.0"/>
+	</list>
+	<list key="J2EE_EXPORT_JST_WEB">
+		<item value="C:\Users\simpson\Documents\카카오톡 받은 파일\커밋용 폴더\movie_managerment.war"/>
+		<item value="C:\Users\simpson\Documents\카카오톡 받은 파일\커밋용 폴더\movie_reservation.war"/>
+		<item value="C:\Users\simpson\Documents\카카오톡 받은 파일\커밋용 폴더\movie_reservation_k.war"/>
+		<item value="C:\Users\simpson\Documents\카카오톡 받은 파일\백업\movie_reservation.war"/>
+		<item value="C:\Users\simpson\Documents\카카오톡 받은 파일\커밋용 폴더\movie_reservation2.war"/>
+	</list>
+	<list key="J2EE_IMPORT_null">
+		<item value="C:\Users\simpson\Documents\카카오톡 받은 파일\movie_reservation.war"/>
+		<item value="C:\Users\simpson\Documents\카카오톡 받은 파일\movie_managerment.war"/>
+		<item value="C:\Users\simpson\Documents\카카오톡 받은 파일\커밋 받은 폴더\movie_managerment_k.war"/>
+		<item value="C:\Users\simpson\Documents\카카오톡 받은 파일\커밋 받은 폴더\movie_reservation_k.war"/>
+		<item value="C:\Users\simpson\Documents\카카오톡 받은 파일\커밋 받은 폴더\movie_managerment.war"/>
+		<item value="C:\Users\simpson\Documents\카카오톡 받은 파일\커밋 받은 폴더\movie_reservation.war"/>
 	</list>
 </section>

@@ -34,9 +34,9 @@ public class BoardWriteServelet extends HttpServlet {
 			
 			//게시판
 			Board board = new Board();
-			board.setbTitle(btitle);
-			board.setbWriter(bwriter);
-			board.setbContent(bcontent);
+			board.setTitle(btitle);
+			board.setWriter(bwriter);
+			board.setContent(bcontent);
 			
 			int result = boardService.insertBoard(board);
 			response.sendRedirect(request.getContextPath() + "/board/boardView?no=" + board.getNo());

@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <servers>
-  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/helloweb-server-config" deployDir="wtpwebapps" hostname="localhost" id="helloweb-server" name="helloweb-server" runtime-id="Apache Tomcat v9.0" serveModulesWithoutPublish="true" server-type="org.eclipse.jst.server.tomcat.90" server-type-id="org.eclipse.jst.server.tomcat.90" start-timeout="45" stop-timeout="15" testEnvironment="true" timestamp="2">
+  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/helloweb-server-config" deployDir="wtpwebapps" hostname="localhost" id="helloweb-server" name="helloweb-server" runtime-id="Apache Tomcat v9.0" serveModulesWithoutPublish="true" server-type="org.eclipse.jst.server.tomcat.90" server-type-id="org.eclipse.jst.server.tomcat.90" start-timeout="45" stop-timeout="15" testEnvironment="true" timestamp="4">
     <list key="modules" value0="01_helloweb::org.eclipse.jst.jee.server:01_helloweb::jst.web::4.0"/>
-  </server>
-  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/simpsonweb-server-config" deployDir="wtpwebapps" hostname="localhost" id="simpsonweb-server" name="simpsonweb-server" runtime-id="Apache Tomcat v9.0" serveModulesWithoutPublish="true" server-type="org.eclipse.jst.server.tomcat.90" server-type-id="org.eclipse.jst.server.tomcat.90" start-timeout="45" stop-timeout="15" testEnvironment="true" timestamp="2">
-    <list key="modules" value0="99_simpsonweb::org.eclipse.jst.jee.server:99_simpsonweb::jst.web::4.0"/>
   </server>
   <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/hellomvc-server-config" deployDir="wtpwebapps" hostname="localhost" id="hellomvc-server" name="hellomvc-server" runtime-id="Apache Tomcat v9.0" serveModulesWithoutPublish="true" server-type="org.eclipse.jst.server.tomcat.90" server-type-id="org.eclipse.jst.server.tomcat.90" start-timeout="45" stop-timeout="15" testEnvironment="true" timestamp="2">
     <list key="modules" value0="02.hellomvc::org.eclipse.jst.jee.server:02.hellomvc::jst.web::4.0"/>
   </server>
-  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/Tomcat v9.0 Server at localhost-config" deployDir="wtpwebapps" hostname="localhost" id="Tomcat v9.0 Server at localhost" name="Tomcat v9.0 Server at localhost" runtime-id="Apache Tomcat v9.0" server-type="org.eclipse.jst.server.tomcat.90" server-type-id="org.eclipse.jst.server.tomcat.90" start-timeout="45" stop-timeout="15" testEnvironment="true" timestamp="1">
-    <list key="modules" value0="PixarBoxProject_::org.eclipse.jst.jee.server:PixarBoxProject_::jst.web::3.1"/>
+  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/ajax-server-config" deployDir="wtpwebapps" hostname="localhost" id="ajax-server" name="ajax-server" runtime-id="Apache Tomcat v9.0" serveModulesWithoutPublish="true" server-type="org.eclipse.jst.server.tomcat.90" server-type-id="org.eclipse.jst.server.tomcat.90" start-timeout="45" stop-timeout="15" testEnvironment="true" timestamp="2">
+    <list key="modules" value0="03_ajax::org.eclipse.jst.jee.server:03_ajax::jst.web::4.0"/>
+  </server>
+  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/simpson_the_movie_server-config" deployDir="wtpwebapps" hostname="localhost" id="simpson_the_movie_server" name="simpson_the_movie_server" runtime-id="Apache Tomcat v9.0" saveSeparateContextFiles="false" serveModulesWithoutPublish="true" server-type="org.eclipse.jst.server.tomcat.90" server-type-id="org.eclipse.jst.server.tomcat.90" start-timeout="45" stop-timeout="15" testEnvironment="true" timestamp="42">
+    <list key="modules" value0="movie_managerment::org.eclipse.jst.jee.server:movie_managerment::jst.web::4.0" value1="movie_reservation::org.eclipse.jst.jee.server:movie_reservation::jst.web::4.0"/>
+  </server>
+  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/simp_test-config" deployDir="wtpwebapps" hostname="localhost" id="simp_test" name="simp_test" runtime-id="Apache Tomcat v9.0" server-type="org.eclipse.jst.server.tomcat.90" server-type-id="org.eclipse.jst.server.tomcat.90" start-timeout="45" stop-timeout="15" testEnvironment="true" timestamp="2">
+    <list key="modules"/>
   </server>
 </servers>

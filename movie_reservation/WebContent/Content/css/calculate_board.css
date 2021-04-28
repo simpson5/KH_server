@@ -1,0 +1,74 @@
+:root {
+  --main-color: yellow;
+  --bg--color: gray;
+  --font-color: black;
+}
+
+body {
+  margin: 0px;
+  overflow-x: hidden;
+}
+
+.calculate_content {
+  background-color: gray;
+  height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  margin: 0;
+  padding: 5vh 0;
+  color: var(--main-color);
+}
+
+/* 메뉴 선택 창 */
+.calculate_bar {
+  text-align: center;
+}
+
+.calculate_bar span {
+  margin: 0;
+  color: var(--main-color);
+  font-size: 1.5vw;
+}
+
+.calculate_bar span:hover {
+  cursor: pointer;
+}
+
+.calculate_bar span:not(:last-of-type)::after {
+  content: "|";
+  text-decoration: none;
+  color: var(--main-color);
+  padding: 0 1.5vw;
+}
+.search {
+  text-align: center;
+}
+.button {
+  text-align: center;
+  color: yellow;
+}
+
+/*게시판*/
+section#board-container {
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+section#board-container h2 {
+  margin: 10px 0;
+}
+table#tbl-board {
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid black;
+  border-collapse: collapse;
+  clear: both;
+}
+table#tbl-board th,
+table#tbl-board td {
+  border: 1px solid;
+  padding: 5px 0;
+  text-align: center;
+}

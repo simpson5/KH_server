@@ -1,0 +1,132 @@
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+
+/* screen-poster */
+.screen-poster-container {
+  position: relative;
+  height: 80vh;
+  z-index: 0;
+}
+
+.screen-poster {
+  position: absolute;
+  width: 100vw;
+  margin: 0px;
+}
+#screen-poster0 {
+  left: -200vw;
+  top: 0px;
+}
+#screen-poster1 {
+  left: -100vw;
+  top: 0px;
+}
+
+#screen-poster3 {
+  left: 100vw;
+  top: 0px;
+}
+#screen-poster4 {
+  left: 200vw;
+  top: 0px;
+}
+
+.poster-icon {
+  position: absolute;
+  font-size: 7vw;
+  color: yellow;
+  z-index: 3;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.poster-icon:hover {
+  cursor: pointer;
+}
+
+.fa-angle-left {
+  left: 5vw;
+}
+
+.fa-angle-right {
+  left: 90vw;
+}
+
+/* 상영작 리스트 */
+.current-screen {
+	position: relative;
+  width: 100vw;
+  text-align: center;
+  box-shadow: 0px -10px 10px 5px black;
+  background-color: black;
+  z-index: 3;
+}
+
+.current-screen-poster {
+  display: inline-block;
+  margin: 5vh 0.8vw;
+  position: relative;
+}
+
+/* 상영작 리스트 포스터 */
+.current-screen-poster{
+	width: 150px;
+}
+
+.current-screen-poster img {
+  width: 150px;
+  height: 220px;
+  border-radius: 10px;
+}
+
+.img-btn1,
+.img-btn2 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  border-style: 1px solid black;
+}
+
+.img-btn1 {
+  top: 30%;
+}
+
+.img-btn2 {
+  top: 50%;
+}
+
+.current-screen-poster:hover .screen_bg {
+  display: block;
+}
+
+.screen_bg {
+  position: absolute;
+  width: 150px;
+  height: 220px;
+  border-radius: 10px;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.screen_info {
+  color: white;
+  font-size: 12px;
+}
+
+.screen_info_box{
+	margin: 0 auto;
+	text-align:center;
+	width : 100px
+}
+
+.dip_movie {
+	cursor: pointer
+}

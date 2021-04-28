@@ -1,0 +1,153 @@
+
+article {
+    position: relative;
+    top: 50px;
+
+    width: 1024px;
+    height: auto;
+    background-color: #fff;
+    padding: 25px;
+    /* border: 1px solid red; */
+    margin: 0 auto;
+}
+#container {
+    border: 1px solid rgb(180, 180, 180);
+    padding: 15px;
+    margin-bottom: 5px;
+}
+.statistic {
+    list-style: none;
+    position: relative;
+    top: -55px;
+    left: 750px;
+}
+.statistic li {
+    float: left;
+    width: 70px;
+    border-right: 1px solid rgb(82, 81, 81);
+    padding: 0;
+    text-align: center;
+    font-size: 14px;
+    /* background-color: #000; */
+}
+.statistic li:last-child {
+    border: none;
+}
+.report a {
+    color: black;
+    text-decoration: none;
+}
+.report a:hover {
+    color: rgb(180, 180, 180);
+}
+.title_line {
+    border-bottom: 1px solid rgb(182, 181, 181);
+    padding-bottom: 15px;
+}
+
+.movie_title_tag {
+    margin-bottom: 15px;
+    padding: 0;
+    position: relative;
+    left: -250px;
+    font-size: 13px;
+}
+
+.content_footer {
+    position: relative;
+    margin-top: 50px;
+    padding: 15px;
+}
+
+.recommend {
+    float: right;
+    display: block;
+    margin-bottom: 20px;
+    position: relative;
+    top: -30px;
+}
+.recommend input{
+    background-color: rgb(254, 213, 23);
+    border: 1px solid rgb(156, 156, 156);
+}
+.recommend input:hover{
+    background-color: rgb(255, 225, 90);
+}
+
+.reply_box {
+    border: 1px solid rgb(156, 156, 156);
+    padding-top: 30px;
+    padding-left: 30px;
+}
+.reply_area {
+    width: 900px;
+    border: none;
+    resize: none;
+}
+.user_id {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 13px;
+    font-weight: bold;
+
+}
+
+.reply_title {
+    display: inline-block;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.reply_sumit {
+    width: 100px;
+    height: 50px;
+    position: relative;
+    left: 861px;
+    top: -1px;
+    background-color: rgb(254, 213, 23);
+    border: 1px solid black;
+}
+.reply_sumit:hover{
+    background-color: rgb(255, 225, 90);
+}
+.reply_box_footer {
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid rgb(179, 179, 179);
+    position: relative;
+    left: -30px;
+}
+
+.reply_text_cnt {
+    position: relative;
+    left: 650px;
+    color: rgb(199, 199, 199);
+}
+
+.reply_history {
+    padding: 15px 0 0;
+    margin: 0;
+    background-color: rgba(254, 212, 23, 0.096);
+    width: 100%;
+    height: 100px;
+    border-bottom: 1px solid rgb(190, 190, 190);
+}
+
+.reply_history_content_time {
+    font-size: 12px;
+    color: rgb(209, 208, 208);
+}
+
+.reply_delete_btn {
+    position: relative;
+    left: 850px;
+    background-color: rgb(253, 80, 80);
+}
+.reply_delete_btn:hover{
+    background-color: rgb(255, 121, 121);
+}
+.reply_paging {
+    margin: 0 auto;
+    text-align: center;
+    height: 30px;
+}

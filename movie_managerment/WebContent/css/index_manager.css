@@ -1,0 +1,102 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap');
+
+body {
+  /* width: 900px; */
+  height: auto;
+  margin:  auto;
+  /* font-size: 35px; */
+  background-color: white;
+  border: 0px solid #000;
+  font-size: 50px;
+}
+
+#btnall{
+  text-align: center;
+  
+}
+.btns{
+  color: yellow;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+button{
+  background-color: gray;
+  position: relative;
+  top: 50px;
+  border: none;
+  border-radius: 50px;
+  color: yellow;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 50px;
+  margin: 15px,15px;
+  outline: 0;
+  margin: 10px 15px;
+  width: 450px;
+  height: 200px;
+  cursor: pointer;
+
+}
+/* a {text-decoration: none}
+a:hover {
+  text-decoration: none;
+}
+
+[class*="btn-"] {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    padding:  60px;
+    height: 60px;
+  
+    line-height: 60px;
+    vertical-align: middle;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+}
+#btnall{
+  position: absolute;
+  top: 60px;
+}
+.btn-type02 {
+    background: #65d5e9;
+}
+[class*="btn-"]:after {
+    content: "";
+    left: -65%;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    opacity: .2;
+    -webkit-transform: skewX(-25deg);
+    transform: skewX(-25deg);
+}
+[class*="btn-"]:hover:after {
+    -webkit-animation: shine 0.55s cubic-bezier(0.19, 1, 0.22, 1);
+    animation: shine 0.55s cubic-bezier(0.19, 1, 0.22, 1);
+}
+@keyframes shine {
+  to {
+    left: 125%;
+  }
+}
+@-webkit-keyframes shine {
+  to {
+    left: 125%;
+  }
+}
+@-ms-keyframes shine {
+  to {
+    left: 125%;
+  }
+}
+
+ */
